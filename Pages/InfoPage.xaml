@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="Microsoft.Samples.Kinect.ControlsBasics.InfoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:k="http://schemas.microsoft.com/kinect/2014"
+      mc:Ignorable="d" Height="300" Width="300"
+	  >
+
+    <Grid Margin="0,0,10,0" >
+        <Grid.Background>
+            <SolidColorBrush Color="White" Opacity="0.4"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Page title -->
+        <TextBlock x:Name="pageTitle" Grid.Column="1" Text="Museum Info Test Page" 
+                   Margin="10 0 10 0" />
+        <ScrollViewer HorizontalAlignment="Left" Height="248" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280" 
+                     HorizontalScrollBarVisibility="Auto" k:KinectRegion.IsHorizontalRailEnabled="true" k:KinectRegion.IsVerticalRailEnabled="False"
+                      k:KinectRegion.ZoomMode="Disabled">
+            <Grid Width="1390">
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="73" Margin="10,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
+                <Image x:Name="image" HorizontalAlignment="Left" Height="150" Margin="237,10,0,0" VerticalAlignment="Top" Width="209" Source="/ControlsBasics-WPF;component/Assets/EngSoc.png"/>
+                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="73" Margin="237,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
+                <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="150" Margin="464,10,0,0" VerticalAlignment="Top" Width="209" Source="/ControlsBasics-WPF;component/Images/fireworks.jpg"/>
+                <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="73" Margin="464,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
+                <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="150" Margin="695,10,0,0" VerticalAlignment="Top" Width="209" Source="/ControlsBasics-WPF;component/Assets/sci19-1080.png"/>
+                <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Height="73" Margin="695,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
+                <Image x:Name="image_Copy2" HorizontalAlignment="Left" Height="150" Margin="928,10,0,0" VerticalAlignment="Top" Width="209" Source="/ControlsBasics-WPF;component/Images/sydney.jpg"/>
+                <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Height="73" Margin="928,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
+                <Image x:Name="image_Copy3" HorizontalAlignment="Left" Height="150" Margin="1163,10,0,0" VerticalAlignment="Top" Width="209" Source="/ControlsBasics-WPF;component/Images/space-back.jpg"/>
+                <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Height="73" Margin="1163,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
+            </Grid>
+        </ScrollViewer>
+
+    </Grid>
+</UserControl>
