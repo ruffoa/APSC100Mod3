@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\School\QueensU Year 1\Mod 3\Kinect Projects\Alpha-App\ControlsBasics-WPF\obj\Debug\
+D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\
 Microsoft.Samples.Kinect.ControlsBasics
 none
 false
 DEBUG;TRACE
-D:\School\QueensU Year 1\Mod 3\Kinect Projects\Alpha-App\ControlsBasics-WPF\App.xaml
-131870994745
+D:\School\QueensU Year 1\Mod 3\Final Project\App.xaml
+14780923368
 
-19-1236991346
-14-49486633
-Common\StandardStyles.xaml;HandPointers\HandPointerStyles.xaml;MainWindow.xaml;Pages\ButtonSample.xaml;Pages\CheckBoxRadioButtonSample.xaml;Pages\EngagementSettings.xaml;Pages\ItemsControlsSample.xaml;Pages\KinectPointerPointSample.xaml;Pages\InfoPage.xaml;Pages\TestPage.xaml;Pages\ScrollViewerSample.xaml;Pages\SliderSample.xaml;SelectionDisplay.xaml;
+20-1440430017
+14-1238715186
+Common\StandardStyles.xaml;HandPointers\HandPointerStyles.xaml;MainWindow.xaml;Pages\ButtonSample.xaml;Pages\playground.xaml;Pages\CheckBoxRadioButtonSample.xaml;Pages\EngagementSettings.xaml;Pages\ItemsControlsSample.xaml;Pages\KinectPointerPointSample.xaml;Pages\InfoPage.xaml;Pages\TestPage.xaml;Pages\ScrollViewerSample.xaml;Pages\SliderSample.xaml;SelectionDisplay.xaml;
 
 False
 

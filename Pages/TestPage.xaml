@@ -29,6 +29,7 @@
         <WebBrowser x:Name="Browser" Margin="182,5,0,137" Grid.Row="1" Loaded="Browser_Loaded" 
                     k:KinectRegion.IsHorizontalRailEnabled="true" k:KinectRegion.IsVerticalRailEnabled="true"
                       k:KinectRegion.ZoomMode="Enabled"/>
+        <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="100" Margin="54,143,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
 
 
     </Grid>

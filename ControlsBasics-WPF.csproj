@@ -99,6 +99,9 @@
     <Compile Include="Pages\ButtonSample.xaml.cs">
       <DependentUpon>ButtonSample.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\playground.xaml.cs">
+      <DependentUpon>playground.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CheckBoxRadioButtonSample.xaml.cs">
       <DependentUpon>CheckBoxRadioButtonSample.xaml</DependentUpon>
     </Compile>
@@ -148,6 +151,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\ButtonSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\playground.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
