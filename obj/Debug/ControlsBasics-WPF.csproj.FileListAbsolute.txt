@@ -133,3 +133,5 @@ D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\ControlsBasics-WPF.exe.ma
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\ControlsBasics-WPF.application
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\playground.baml
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\playground.g.cs
+D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\videoPlayer.baml
+D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\videoPlayer.g.cs
