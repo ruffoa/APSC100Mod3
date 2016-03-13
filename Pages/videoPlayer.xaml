@@ -12,7 +12,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="210" Margin="10,49,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="280"/>
+        <MediaElement x:Name="mediaplayer" Source="Video/video1.mp4" HorizontalAlignment="Left" Height="210" Margin="10,49,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="280"/>
         <Button x:Name="playbutton" Content="Play" HorizontalAlignment="Left" Margin="10,266,0,0" Grid.Row="1" VerticalAlignment="Top" Width="80" Height="24" Click="playbutton_Click"/>
         <Button x:Name="btnOpen" Content="Open File" HorizontalAlignment="Left" Margin="210,266,0,0" Grid.Row="1" VerticalAlignment="Top" Width="80" Height="24" Click="btnOpen_Click"/>
 

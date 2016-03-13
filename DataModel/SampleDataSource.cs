@@ -122,13 +122,14 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                          typeof(InfoPage)));
             group1.Items.Add(
                     new SampleDataItem(
-                        "Group-1-Item-1",
-                         "Item Title: 1",
-                         "Item Subtitle: 1",
-                         "Assets/lightGray.png",
-                         "Item Description: Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-                         itemContent,
-                         group1));
+                        "Group-1-Item-8",
+                        "Example Video Page",
+                        "With basic Options (coming soon) - A.R.",
+                       "Images/abstract-lines.jpg",
+                        "Sample Museum Video Player",
+                        itemContent,
+                        group1,
+                         typeof(videoplayer)));
             group1.Items.Add(
                     new SampleDataItem(
                         "Group-1-Item-2",
