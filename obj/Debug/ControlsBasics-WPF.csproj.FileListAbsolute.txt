@@ -135,3 +135,4 @@ D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\ControlsBasics-WPF.applic
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\ControlsBasics-WPF.exe
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\ControlsBasics-WPF.pdb
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\ControlsBasics-WPF.csprojResolveAssemblyReference.cache
+D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\ControlsBasics-WPF_Content.g.cs

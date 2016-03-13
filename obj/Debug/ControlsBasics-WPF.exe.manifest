@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlsBasics-WPF.exe" size="4397512">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlsBasics-WPF.exe" size="4398024">
       <assemblyIdentity name="ControlsBasics-WPF" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Ggtb/41k6NUgGqdBFYkTWUYzMOgxTPaDLgB32cjbv54=</dsig:DigestValue>
+        <dsig:DigestValue>5da1W+/lYI0FeQE8wJJAyyaYZqMmho85QkQ65L6faAo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -94,6 +94,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>Y9TR1osQ/IWe26QlhJ+QW8ZEJ1YpFImpl+8+6y5gdXg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Videos\video1.mp4" size="54110271">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>UvWjlSHuHcyQR7Vdaasp0A8v3sedtgatnD72wtVSw8I=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

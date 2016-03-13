@@ -7,6 +7,7 @@
 namespace Microsoft.Samples.Kinect.ControlsBasics
 {
     using System;
+    using System.Windows;
     using System.Windows.Controls;
 
     /// <summary>
@@ -21,6 +22,8 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         {
             this.InitializeComponent();
             IsPlaying(false);
+            mediaplayer.LoadedBehavior = MediaState.Manual;
+            mediaplayer.UnloadedBehavior = MediaState.Stop;
             //mediaplayer.Source = new Uri("Videos/video1.mp4");
             playbutton.IsEnabled = true;
         }
@@ -60,6 +63,12 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             {
                 mediaplayer.Play();
                 playbutton.Content = "Pause";
+                //if (mediaplayer.MediaFailed() += 1)
+
+                {
+                        MessageBox.Show("fail to load!");
+                    
+                }
             }
             else
             {

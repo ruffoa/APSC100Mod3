@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="ControlsBasics-WPF.exe.manifest" size="5378">
+    <dependentAssembly dependencyType="install" codebase="ControlsBasics-WPF.exe.manifest" size="5777">
       <assemblyIdentity name="ControlsBasics-WPF.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hRmEY2oFuUc8/zGY7k0B2InXyCz6F7UF17cP77S9Nkw=</dsig:DigestValue>
+        <dsig:DigestValue>G3VcQf0o4eU8xm0rGFBngU1Z8vi0hYlELzY1+r26tuw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
