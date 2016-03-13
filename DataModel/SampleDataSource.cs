@@ -80,6 +80,16 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                         group1,
                         typeof(ScrollViewerSample)));
             group1.Items.Add(
+        new SampleDataItem(
+            string.Empty,
+            "CMS",
+            "Sean Lee",
+            "assets/lightGray.png",
+            "TEST",
+            itemContent,
+            group1,
+            typeof(CMS)));
+            group1.Items.Add(
                     new SampleDataItem(
                         "Group-1-Item-6",
                         "Kinect Pointer Events",
