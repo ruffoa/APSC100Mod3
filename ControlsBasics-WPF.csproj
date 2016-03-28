@@ -63,7 +63,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>false</SignManifests>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Kinect, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -96,9 +96,6 @@
     <Compile Include="Common\BindableBase.cs" />
     <Compile Include="DataModel\SampleDataSource.cs" />
     <Compile Include="HandPointers\HandInScreenEngagementModel.cs" />
-    <Compile Include="Pages\CMS.xaml.cs">
-      <DependentUpon>CMS.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\videoPlayer.xaml.cs">
       <DependentUpon>videoPlayer.xaml</DependentUpon>
     </Compile>
@@ -156,10 +153,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\CMS.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Pages\videoPlayer.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -290,6 +283,26 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Resource Include="hcAssets\grid1.png" />
+    <Resource Include="hcAssets\grid10.png" />
+    <Resource Include="hcAssets\grid11.png" />
+    <Resource Include="hcAssets\grid12.png" />
+    <Resource Include="hcAssets\grid13.png" />
+    <Resource Include="hcAssets\grid14.png" />
+    <Resource Include="hcAssets\grid15.png" />
+    <Resource Include="hcAssets\grid16.png" />
+    <Resource Include="hcAssets\grid17.png" />
+    <Resource Include="hcAssets\grid18.png" />
+    <Resource Include="hcAssets\grid19.png" />
+    <Resource Include="hcAssets\grid2.png" />
+    <Resource Include="hcAssets\grid3.png" />
+    <Resource Include="hcAssets\grid4.png" />
+    <Resource Include="hcAssets\grid5.png" />
+    <Resource Include="hcAssets\grid6.png" />
+    <Resource Include="hcAssets\grid7.png" />
+    <Resource Include="hcAssets\grid8.png" />
+    <Resource Include="hcAssets\grid9.png" />
+    <Resource Include="Assets\bg.jpg" />
     <Content Include="Videos\video1.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

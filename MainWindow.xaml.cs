@@ -82,5 +82,10 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             backButton.Visibility = System.Windows.Visibility.Hidden;
             navigationRegion.Content = this.kinectRegionGrid;
         }
+
+        private void itemsControl_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+
+        }
     }
 }

@@ -54,7 +54,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                         "Group-1-Item-1",
                         "Buttons",
                         string.Empty,
-                        "Assets/DarkGray.png",
+                        "hcAssets/grid1.png",
                         "Several types of buttons with custom styles",
                         itemContent,
                         group1,
@@ -64,7 +64,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                         "Group-1-Item-2",
                         "CheckBoxes and RadioButtons",
                         string.Empty,
-                        "assets/lightGray.png",
+                        "hcAssets/grid2.png",
                         "CheckBox and RadioButton controls",
                         itemContent,
                         group1,
@@ -74,27 +74,17 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                         "Group-1-Item-5",
                         "Zoomable Photo",
                         string.Empty,
-                        "assets/lightGray.png",
+                        "hcAssets/grid3.png",
                         "ScrollViewer control hosting a photo, enabling scrolling and zooming.",
                         itemContent,
                         group1,
                         typeof(ScrollViewerSample)));
             group1.Items.Add(
-        new SampleDataItem(
-            string.Empty,
-            "CMS",
-            "Sean Lee",
-            "assets/lightGray.png",
-            "TEST",
-            itemContent,
-            group1,
-            typeof(CMS)));
-            group1.Items.Add(
                     new SampleDataItem(
                         "Group-1-Item-6",
                         "Kinect Pointer Events",
                         string.Empty,
-                        "Assets/engsoc.png",
+                        "hcAssets/grid4.png",
                         "Example of how to get KinectPointerPoints.",
                         itemContent,
                         group1,
@@ -104,7 +94,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                         "Group-1-Item-7",
                         "Engagement and Cursor Settings",
                         "",
-                        "Assets/lightGray.png",
+                        "hcAssets/grid5.png",
                         "Enables user to switch between engagement models and cursor visuals.",
                         itemContent,
                         group1,
@@ -114,7 +104,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                         "Group-1-Item-8",
                         "Testing the Kinect",
                         "By: Alex Ruffo",
-                        "Assets/EngSoc.png",
+                        "hcAssets/grid6.png",
                         
                         "Testing :)",
                         itemContent,
@@ -125,7 +115,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                         "Group-1-Item-7",
                         "Example Info Page",
                         "With photos - A.R.",
-                       "Images/abstract-lines.jpg",
+                       "hcAssets/grid7.png",
                         "Sample Museum Display Page",
                         itemContent,
                         group1,
@@ -135,7 +125,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                         "Group-1-Item-8",
                         "Example Video Page",
                         "With basic Options (coming soon) - A.R.",
-                       "Images/abstract-lines.jpg",
+                       "hcAssets/grid8.png",
                         "Sample Museum Video Player",
                         itemContent,
                         group1,
@@ -145,7 +135,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                         "Group-1-Item-2",
                         "Item Title: 2",
                         "Item Subtitle: 2",
-                        "Assets/lightGray.png",
+                        "hcAssets/grid9.png",
                         "Item Description: Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
                         itemContent,
                         group1));
@@ -154,7 +144,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                         "Group-1-Item-3",
                         "Item Title: 3",
                         "Item Subtitle: 3",
-                        "Assets/lightGray.png",
+                        "hcAssets/grid10.png",
                         "Item Description: Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
                         itemContent,
                         group1));
@@ -163,7 +153,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                         "Group-1-Item-4",
                         "Item Title: 4",
                         "Item Subtitle: 4",
-                        "Assets/lightGray.png",
+                        "hcAssets/grid11.png",
                         "Item Description: Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
                         itemContent,
                         group1));
@@ -172,7 +162,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                         "Group-1-Item-5",
                         "Item Title: 5",
                         "Item Subtitle: 5",
-                        "Assets/lightGray.png",
+                        "hcAssets/grid12.png",
                         "Item Description: Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
                         itemContent,
                         group1));
@@ -181,7 +171,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                         "Group-1-Item-2",
                         "Item Title: 2",
                         "Item Subtitle: 2",
-                        "Assets/lightGray.png",
+                        "hcAssets/grid13.png",
                         "Item Description: Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
                         itemContent,
                         group1));
@@ -189,7 +179,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                         "Group-1-Item-3",
                         "Item Title: 3",
                         "Item Subtitle: 3",
-                        "Assets/lightGray.png",
+                        "hcAssets/grid14.png",
                         "Item Description: Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
                         itemContent,
                         group1));
@@ -198,7 +188,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                         "Group-1-Item-4",
                         "Item Title: 4",
                         "Item Subtitle: 4",
-                        "Assets/lightGray.png",
+                        "hcAssets/grid15.png",
                         "Item Description: Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
                         itemContent,
                         group1));
@@ -207,7 +197,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                     "Group-1-Item-5",
                         "Item Title: 5",
                         "Item Subtitle: 5",
-                        "Assets/lightGray.png",
+                        "hcAssets/grid16.png",
                         "Item Description: Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
                         itemContent,
                         group1));
@@ -216,7 +206,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                     "Group-1-Item-6",
                         "Item Title: 6",
                         "Item Subtitle: 6",
-                        "Assets/lightGray.png",
+                        "hcAssets/grid17.png",
                         "Item Description: Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
                         itemContent,
                         group1));
@@ -225,7 +215,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                     "Group-1-Item-7",
                         "Item Title: 7",
                         "Item Subtitle: 7",
-                        "Assets/lightGray.png",
+                        "hcAssets/grid18.png",
                         "Item Description: Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
                         itemContent,
                         group1));
@@ -234,13 +224,18 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                     "Group-1-Item-1",
                          "Item Title: 1",
                          "Item Subtitle: 1",
-                         "Assets/lightGray.png",
+                         "hcAssets/grid19.png",
                          "Item Description: Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
                          itemContent,
                          group1));
             
       
             this.AllGroups.Add(group1);
+        }
+
+        private string GetFileNameWithoutExtension(string v)
+        {
+            throw new NotImplementedException();
         }
 
         public ObservableCollection<SampleDataCollection> AllGroups
