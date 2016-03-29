@@ -136,3 +136,6 @@ D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\ControlsBasics-WPF.exe
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\ControlsBasics-WPF.pdb
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\ControlsBasics-WPF.csprojResolveAssemblyReference.cache
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\ControlsBasics-WPF_Content.g.cs
+C:\Users\Chris\Documents\mod3\bin\AnyCPU\Debug\ControlsBasics-WPF.exe.config
+C:\Users\Chris\Documents\mod3\obj\Debug\ControlsBasics-WPF.exe
+C:\Users\Chris\Documents\mod3\obj\Debug\ControlsBasics-WPF.pdb
