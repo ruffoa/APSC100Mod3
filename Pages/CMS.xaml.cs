@@ -9,6 +9,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
     using System.Windows.Controls;
     using System.Windows;
     using Win32;
+    using System.Windows.Navigation;
 
     /// <summary>
     /// Interaction logic for CheckBoxRadioButtonSample
@@ -18,7 +19,19 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         /// <summary>
         /// Initializes a new instance of the <see cref="CheckBoxRadioButtonSample" /> class.
         /// </summary>
-        public CMS()
+        /// 
+      //  private MainWindow MainWindow;
+
+      //  public CMS(MainWindow mainWindow)
+      //  {
+      //      InitializeComponent();
+
+      //      this.MainWindow = mainWindow;
+
+            // Other constructor stuff
+      //  }
+
+       public CMS()
         {
             this.InitializeComponent();
         }
@@ -41,13 +54,27 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         }
 
+        void DoOk(Window CMS)
+        {
+            // < !--Your Code-- >
+         //win.DialogResult = true;
+            CMS.Close();
+        }
+
         private void goBack_Click(object sender, RoutedEventArgs e)
         {
-         //   NavigationService nav = NavigationService.GetNavigationService(this);
-           // nav.Navigate(new Uri("xamlFeedbackPage.xaml", UriKind.RelativeOrAbsolute));
+            //   NavigationService nav = NavigationService.GetNavigationService(this);
+            // nav.Navigate(new Uri("xamlFeedbackPage.xaml", UriKind.RelativeOrAbsolute));
 
-            MainWindow newpage = new MainWindow();
-            this.Content = newpage;
+            MainWindow mainWindow = ControlsBasics.MainWindow.GetMainWindow();
+            mainWindow.Show();
+
+            //DoOk(this);
+            //System.Windows.Window.
+          //  this.Close();
+
+            //ControlsBasics.CMS.Close;
+            // this.Content = mainWindow;
         }
     }
 }

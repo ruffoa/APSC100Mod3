@@ -106,6 +106,28 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         }
 
+        public static MainWindow GetMainWindow()
+        {
+            MainWindow mainWindow = null;
+
+            foreach (Window window in Application.Current.Windows)
+            {
+                Type type = typeof(MainWindow);
+                if (window != null && window.DependencyObjectType.Name == type.Name)
+                {
+                    mainWindow = (MainWindow)window;
+                    if (mainWindow != null)
+                    {
+                        break;
+                    }
+                }
+            }
+
+
+            return mainWindow;
+
+        }
+
         public static void goHome()  // gets whether or not a PM can be sent, and sends it to the PM window.
         {
             m_Singleton.refresh();
