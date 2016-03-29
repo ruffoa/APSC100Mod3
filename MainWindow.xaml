@@ -13,7 +13,7 @@
         MinWidth="500"
         MinHeight="700"
         FontFamily="Segoe UI"
-        WindowState="Maximized"
+        WindowState="Maximized" KeyDown="ControlsBasicsWindow_KeyDown"
         >
     <Window.Background>
         <ImageBrush ImageSource="Assets/bg.jpg"/>
@@ -46,7 +46,7 @@
  
                                   VerticalScrollBarVisibility="Disabled" 
                                   k:KinectRegion.IsScrollInertiaEnabled="true" >
-                        <ItemsControl Grid.Row="0" Name="itemsControl" ItemTemplate="{StaticResource Kinect250x250ItemTemplate}" Button.Click="ButtonClick" KeyDown="itemsControl_KeyDown">
+                        <ItemsControl Grid.Row="0" Name="itemsControl" ItemTemplate="{StaticResource Kinect250x250ItemTemplate}" Button.Click="ButtonClick" >
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <WrapPanel VerticalAlignment="Center" Orientation="Vertical" Margin="75,0,75,0" />

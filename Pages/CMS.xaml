@@ -29,6 +29,7 @@
         <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="30" Margin="10,187,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Choose a File" VerticalAlignment="Top" Width="438" TextChanged="textBox_TextChanged"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="37" Margin="10,37,0,0" Grid.Row="1" TextWrapping="Wrap" Text="File to Change" VerticalAlignment="Top" Width="438" FontSize="16"/>
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="37" Margin="10,145,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Change with" VerticalAlignment="Top" Width="438" FontSize="16"/>
+        <Button x:Name="goBack" Content="Back to Home" HorizontalAlignment="Left" Margin="150,425,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Height="30" Background="#FF3DB93D" Click="goBack_Click"/>
 
     </Grid>
 </UserControl>

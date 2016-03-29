@@ -40,5 +40,14 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         {
 
         }
+
+        private void goBack_Click(object sender, RoutedEventArgs e)
+        {
+         //   NavigationService nav = NavigationService.GetNavigationService(this);
+           // nav.Navigate(new Uri("xamlFeedbackPage.xaml", UriKind.RelativeOrAbsolute));
+
+            MainWindow newpage = new MainWindow();
+            this.Content = newpage;
+        }
     }
 }

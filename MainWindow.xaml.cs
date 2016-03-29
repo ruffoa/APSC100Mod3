@@ -18,6 +18,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
     /// </summary>
     public partial class MainWindow
     {
+        public static MainWindow m_Singleton = new ControlsBasics.MainWindow();
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class. 
         /// </summary>
@@ -44,7 +45,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         /// <param name="sender">Event sender</param>
         /// <param name="e">Event arguments</param>
         private void ButtonClick(object sender, RoutedEventArgs e)
-        {            
+        {
             var button = (Button)e.OriginalSource;
             SampleDataItem sampleDataItem = button.DataContext as SampleDataItem;
 
@@ -57,7 +58,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             {
                 var selectionDisplay = new SelectionDisplay(button.Content as string);
                 this.kinectRegionGrid.Children.Add(selectionDisplay);
-         
+
                 // Selection dialog covers the entire interact-able area, so the current press interaction
                 // should be completed. Otherwise hover capture will allow the button to be clicked again within
                 // the same interaction (even whilst no longer visible).
@@ -83,9 +84,36 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             navigationRegion.Content = this.kinectRegionGrid;
         }
 
-        private void itemsControl_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
-        {
 
+        private void ControlsBasicsWindow_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Home)
+            {
+                // MessageBox.Show("key detected");
+
+                CMS mynewPage = new CMS(); //newPage is the name of the newPage.xaml file
+                this.Content = mynewPage;
+                backButton.Visibility = System.Windows.Visibility.Visible;
+                navigationRegion.Content = this.kinectRegionGrid;
+
+                if (e.Key == System.Windows.Input.Key.Escape)
+                {
+                    MainWindow mainpage = new MainWindow();
+                    this.Content = mainpage;
+                    //  navigationRegion.Content = Window.c
+                }
+            }
+
+        }
+
+        public static void goHome()  // gets whether or not a PM can be sent, and sends it to the PM window.
+        {
+            m_Singleton.refresh();
+        }
+        void refresh()  // checks to see if message can be sent, and who it is sent to
+        {
+            MainWindow mainpage = new MainWindow();
+            this.Content = mainpage;
         }
     }
 }
