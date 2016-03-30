@@ -96,6 +96,9 @@
     <Compile Include="Common\BindableBase.cs" />
     <Compile Include="DataModel\SampleDataSource.cs" />
     <Compile Include="HandPointers\HandInScreenEngagementModel.cs" />
+    <Compile Include="Pages\login.xaml.cs">
+      <DependentUpon>login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CMS.xaml.cs">
       <DependentUpon>CMS.xaml</DependentUpon>
     </Compile>
@@ -156,6 +159,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\CMS.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -310,6 +317,12 @@
     <Resource Include="hcAssets\grid8.png" />
     <Resource Include="hcAssets\grid9.png" />
     <Resource Include="Assets\bg.jpg" />
+    <Resource Include="Images\check.png" />
+    <Resource Include="Images\lock.png" />
+    <Resource Include="Images\error.png" />
+    <Resource Include="Images\admin.png" />
+    <Resource Include="Images\list.png" />
+    <Resource Include="DataModel\data.txt" />
     <Content Include="Videos\video1.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -22,5 +22,17 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("default")]
+        public string password {
+            get {
+                return ((string)(this["password"]));
+            }
+            set {
+                this["password"] = value;
+            }
+        }
     }
 }

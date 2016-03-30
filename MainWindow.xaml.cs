@@ -12,13 +12,22 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
     using Microsoft.Kinect;
     using Microsoft.Kinect.Wpf.Controls;
     using Microsoft.Samples.Kinect.ControlsBasics.DataModel;
-
-    /// <summary>
-    /// Interaction logic for MainWindow
-    /// </summary>
+    using System.Windows.Input;
+    using System.Timers;
+    using System.Collections;
+    using System.IO;    /// <summary>
+                        /// Interaction logic for MainWindow
+                        /// </summary>
     public partial class MainWindow
     {
         public static MainWindow m_Singleton = new ControlsBasics.MainWindow();
+        //public static string password = "ecei";
+        // password = ControlsBasics.Properties.Settings.Default.password
+        public static string password = Properties.Settings.Default.password;
+        
+        public static bool user = false;
+        public static System.Timers.Timer aTimer = new System.Timers.Timer();
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class. 
         /// </summary>
@@ -37,6 +46,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             //// Add in display content
             var sampleDataSource = SampleDataSource.GetGroup("Group-1");
             this.itemsControl.ItemsSource = sampleDataSource;
+            
         }
 
         /// <summary>
@@ -89,13 +99,30 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         {
             if (e.Key == System.Windows.Input.Key.Home)
             {
+                if (user == true)
+                {
+                    CMS mynewPage = new CMS(); //newPage is the name of the newPage.xaml file
+
+                    this.Content = mynewPage;
+                }
+                    // MessageBox.Show("key detected");
+
+            else
+                {
+                    Login mynewPage = new Login(); //newPage is the name of the newPage.xaml file
+
+                    this.Content = mynewPage;
+
+                    
+                }
+                    
+               
+            }
+
+            if (e.Key == System.Windows.Input.Key.End)
+            {
                 // MessageBox.Show("key detected");
 
-                
-                CMS mynewPage = new CMS(); //newPage is the name of the newPage.xaml file
-
-                this.Content = mynewPage;
-               
             }
 
         }
@@ -122,6 +149,8 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         }
 
+       
+
         public static MainWindow CloseWindow()
         {
 
@@ -147,6 +176,65 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             return nll;
         }
 
+        public static MainWindow CloseAllButMain()
+        {
+
+            MainWindow nll = null;
+            MainWindow mainWindow = ControlsBasics.MainWindow.GetMainWindow();
+            //mainWindow.Close();
+
+            var winctr = Application.Current.Windows.Count;
+            string myString = winctr.ToString();
+
+            for (int intCounter = App.Current.Windows.Count - 1; intCounter >= 1; intCounter--)
+            //for (int intCounter = 0; intCounter <= App.Current.Windows.Count - 1; intCounter++)
+            {
+                App.Current.Windows[intCounter].Close();
+                string winID = intCounter.ToString();
+
+                // MessageBox.Show("window closed" + winID);
+            }
+
+            //MessageBox.Show(myString);
+
+
+            return nll;
+        }
+
+        public static void LoginCMS()
+        {
+            CloseAllButMain();
+
+            aTimer.Elapsed += new System.Timers.ElapsedEventHandler(OnTimedEvent);
+            aTimer.Interval = 300000;
+            aTimer.Enabled = true;
+
+            var key = Key.Home;                    // Key to send
+            var target = Keyboard.FocusedElement;    // Target element
+            var routedEvent = Keyboard.KeyDownEvent; // Event to send
+            
+            target.RaiseEvent(new System.Windows.Input.KeyEventArgs(Keyboard.PrimaryDevice,
+  System.Windows.PresentationSource.FromVisual((System.Windows.Media.Visual)target), 0, key)
+            { RoutedEvent = routedEvent });
+
+        }
+
+        private static void OnTimedEvent(object sender, ElapsedEventArgs e)
+        {
+            user = false;
+            aTimer.Enabled = false;
+        }
+
+        private void openCMS()
+        {
+            if (user == true)
+            {
+                CMS cms1 = new CMS(); //newPage is the name of the newPage.xaml file
+
+                this.Content = cms1;
+            }
+        }
+
         public static int winCount()
         {
             var winctr = Application.Current.Windows.Count;
@@ -156,15 +244,5 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         }
 
 
-        public static void goHome()  // gets whether or not a PM can be sent, and sends it to the PM window.
-        {
-            m_Singleton.refresh();
-        }
-        void refresh()  // checks to see if message can be sent, and who it is sent to
-        {
-            MainWindow mainpage = new MainWindow();
-            this.Content = mainpage;
-            
-        }
     }
 }

@@ -21,20 +21,22 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         /// Initializes a new instance of the <see cref="CheckBoxRadioButtonSample" /> class.
         /// </summary>
         /// 
-      //  private MainWindow MainWindow;
+        //  private MainWindow MainWindow;
 
-      //  public CMS(MainWindow mainWindow)
-      //  {
-      //      InitializeComponent();
+        //  public CMS(MainWindow mainWindow)
+        //  {
+        //      InitializeComponent();
 
-      //      this.MainWindow = mainWindow;
+        //      this.MainWindow = mainWindow;
 
-            // Other constructor stuff
-      //  }
+        // Other constructor stuff
+        //  }
+
 
        public CMS()
         {
             this.InitializeComponent();
+
         }
 
         private void bOpenFileDialog_Click(object sender, RoutedEventArgs e)
@@ -113,6 +115,8 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
                 ControlsBasics.MainWindow.CloseWindow();
             }
+
+
         }
     }
 }
