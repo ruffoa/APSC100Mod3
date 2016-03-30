@@ -91,17 +91,11 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             {
                 // MessageBox.Show("key detected");
 
+                
                 CMS mynewPage = new CMS(); //newPage is the name of the newPage.xaml file
-                this.Content = mynewPage;
-                backButton.Visibility = System.Windows.Visibility.Visible;
-                navigationRegion.Content = this.kinectRegionGrid;
 
-                if (e.Key == System.Windows.Input.Key.Escape)
-                {
-                    MainWindow mainpage = new MainWindow();
-                    this.Content = mainpage;
-                    //  navigationRegion.Content = Window.c
-                }
+                this.Content = mynewPage;
+               
             }
 
         }
@@ -128,6 +122,40 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         }
 
+        public static MainWindow CloseWindow()
+        {
+
+            MainWindow nll = null;
+            MainWindow mainWindow = ControlsBasics.MainWindow.GetMainWindow();
+            //mainWindow.Close();
+            
+            var winctr = Application.Current.Windows.Count;
+            string myString = winctr.ToString();
+
+            //for (int intCounter = App.Current.Windows.Count - 1; intCounter >= 1; intCounter--)
+            for (int intCounter = 0; intCounter <= App.Current.Windows.Count - 1; intCounter++)
+            {
+                App.Current.Windows[intCounter].Close();
+                string winID = intCounter.ToString();
+
+              // MessageBox.Show("window closed" + winID);
+            }
+
+         //MessageBox.Show(myString);
+         
+            
+            return nll;
+        }
+
+        public static int winCount()
+        {
+            var winctr = Application.Current.Windows.Count;
+            string myString = winctr.ToString();
+            //MessageBox.Show(myString);
+            return winctr;
+        }
+
+
         public static void goHome()  // gets whether or not a PM can be sent, and sends it to the PM window.
         {
             m_Singleton.refresh();
@@ -136,6 +164,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         {
             MainWindow mainpage = new MainWindow();
             this.Content = mainpage;
+            
         }
     }
 }

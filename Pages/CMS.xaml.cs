@@ -10,6 +10,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
     using System.Windows;
     using Win32;
     using System.Windows.Navigation;
+    using System;
 
     /// <summary>
     /// Interaction logic for CheckBoxRadioButtonSample
@@ -66,15 +67,52 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             //   NavigationService nav = NavigationService.GetNavigationService(this);
             // nav.Navigate(new Uri("xamlFeedbackPage.xaml", UriKind.RelativeOrAbsolute));
 
-            MainWindow mainWindow = ControlsBasics.MainWindow.GetMainWindow();
+            // MainWindow mainWindow = ControlsBasics.MainWindow.GetMainWindow();
+            MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
+            
+            if (MainWindow.winCount() == 3)
+            {
+                MainWindow nmain = new MainWindow();
+                nmain.Show();
+                ControlsBasics.MainWindow.CloseWindow();
 
-            //DoOk(this);
-            //System.Windows.Window.
-          //  this.Close();
+            }
 
-            //ControlsBasics.CMS.Close;
-            // this.Content = mainWindow;
+
+            ControlsBasics.MainWindow.CloseWindow();
+           
+        }
+
+        private void Close()
+        {
+            
+           
+        }
+
+        private void UserControl_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Escape)
+            {
+                //MessageBox.Show("key detected");
+
+                // MainWindow mainWindow = ControlsBasics.MainWindow.GetMainWindow();
+
+                //MainWindow.winCount();
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+
+                if (MainWindow.winCount() == 3)
+                {
+                    MainWindow nmain = new MainWindow();
+                    nmain.Show();
+                    ControlsBasics.MainWindow.CloseWindow();
+
+                }
+
+
+                ControlsBasics.MainWindow.CloseWindow();
+            }
         }
     }
 }

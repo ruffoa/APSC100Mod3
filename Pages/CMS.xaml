@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      mc:Ignorable="d" Height="630.345" Width="979.388"
+      mc:Ignorable="d" Height="630.345" Width="979.388" KeyDown="UserControl_KeyDown"
 	>
     <UserControl.Background>
         <SolidColorBrush Color="White" Opacity="0.4"/>
@@ -29,7 +29,9 @@
         <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="30" Margin="10,187,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Choose a File" VerticalAlignment="Top" Width="438" TextChanged="textBox_TextChanged"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="37" Margin="10,37,0,0" Grid.Row="1" TextWrapping="Wrap" Text="File to Change" VerticalAlignment="Top" Width="438" FontSize="16"/>
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="37" Margin="10,145,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Change with" VerticalAlignment="Top" Width="438" FontSize="16"/>
-        <Button x:Name="goBack" Content="Back to Home" HorizontalAlignment="Left" Margin="150,425,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Height="30" Background="#FF3DB93D" Click="goBack_Click"/>
+        <Button x:Name="goBack" Content="Back to Home" HorizontalAlignment="Left" Margin="123,493,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Height="30" Background="#FF3DB93D" Click="goBack_Click"/>
+
 
     </Grid>
+    
 </UserControl>

@@ -89,6 +89,11 @@ D:\School\QueensU Year 1\Mod 3\Kinect Projects\Alpha-App\ControlsBasics-WPF\obj\
 C:\Users\Chris\Documents\mod3\bin\AnyCPU\Debug\ControlsBasics-WPF.exe.config
 C:\Users\Chris\Documents\mod3\obj\Debug\ControlsBasics-WPF.exe
 C:\Users\Chris\Documents\mod3\obj\Debug\ControlsBasics-WPF.pdb
+D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Mod3-Project.exe.config
+D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Mod3-Project.exe.manifest
+D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Mod3-Project.application
+D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Mod3-Project.exe
+D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Mod3-Project.pdb
 D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Microsoft.Kinect.dll
 D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Microsoft.Kinect.Wpf.Controls.dll
 D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Microsoft.Kinect.xml
@@ -123,20 +128,14 @@ D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\ScrollViewerSample.
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\SliderSample.g.cs
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\SelectionDisplay.g.cs
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\App.g.cs
-D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\MainWindow.baml
-D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\TestPage.baml
-D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Microsoft.Samples.Kinect.ControlsBasics.Properties.Resources.resources
-D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\ControlsBasics-WPF.csproj.GenerateResource.Cache
-D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\ControlsBasics-WPF.csprojResolveAssemblyReference.cache
-D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Mod3-Project.exe.config
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Mod3-Project_Content.g.cs
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Mod3-Project_MarkupCompile.cache
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Mod3-Project_MarkupCompile.lref
-D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Mod3-Project.exe.manifest
-D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Mod3-Project.application
-D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Mod3-Project.exe
-D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Mod3-Project.pdb
+D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\MainWindow.baml
+D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\TestPage.baml
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Mod3-Project.g.resources
+D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Microsoft.Samples.Kinect.ControlsBasics.Properties.Resources.resources
+D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\ControlsBasics-WPF.csproj.GenerateResource.Cache
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Mod3-Project.exe.manifest
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Mod3-Project.application
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Mod3-Project.exe
