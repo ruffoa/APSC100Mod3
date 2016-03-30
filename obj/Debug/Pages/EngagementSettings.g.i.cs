@@ -115,7 +115,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ControlsBasics-WPF;component/pages/engagementsettings.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Mod3-Project;component/pages/engagementsettings.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Pages\EngagementSettings.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

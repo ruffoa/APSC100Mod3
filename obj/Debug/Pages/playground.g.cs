@@ -59,7 +59,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ControlsBasics-WPF;component/pages/playground.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Mod3-Project;component/pages/playground.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Pages\playground.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

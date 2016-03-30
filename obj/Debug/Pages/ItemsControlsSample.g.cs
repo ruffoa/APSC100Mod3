@@ -75,7 +75,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ControlsBasics-WPF;component/pages/itemscontrolssample.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Mod3-Project;component/pages/itemscontrolssample.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Pages\ItemsControlsSample.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

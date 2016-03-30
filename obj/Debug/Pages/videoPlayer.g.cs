@@ -83,7 +83,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ControlsBasics-WPF;component/pages/videoplayer.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Mod3-Project;component/pages/videoplayer.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Pages\videoPlayer.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
