@@ -39,6 +39,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         public static bool openHelp = false;
         public static bool inHelp = false;
         public static bool userpresent = false;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class. 
         /// </summary>

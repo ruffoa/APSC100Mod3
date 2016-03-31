@@ -58,12 +58,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         }
 
-        void DoOk(Window CMS)
-        {
-            // < !--Your Code-- >
-         //win.DialogResult = true;
-            CMS.Close();
-        }
+        
 
         private void goBack_Click(object sender, RoutedEventArgs e)
         {

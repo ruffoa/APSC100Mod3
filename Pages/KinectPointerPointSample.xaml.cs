@@ -117,6 +117,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             TimeSpan timeCounter,
             ulong trackingId,
             HandType handType)
+
         {
             StackPanel cursor = null;
             if (cursor == null)

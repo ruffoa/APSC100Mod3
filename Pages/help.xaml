@@ -25,9 +25,12 @@
             <TextBlock x:Name="instructions" HorizontalAlignment="Left" Margin="41,10,0,0" TextWrapping="Wrap" Text="How to Use This Interactive Display" VerticalAlignment="Top" FontSize="48"/>
             <Button x:Name="next" Content="Next Instruction" HorizontalAlignment="Left" Margin="638,499,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Height="52" Background="#FF3DB93D" Click="next_Click"/>
             <TextBox x:Name="scrollHelp" HorizontalAlignment="Left" Height="465" Margin="560,10,0,0" Grid.Row="1" TextWrapping="Wrap" 
-                 Text="The following guide will help you learn how to use the reposnsive Kinect display.  Hold out your hand towards the screen in order to be detected by the Kinect sensor.  A hand cursor will apear on screen when you are recognized.  This process may take a few seconds.  Try hovering over the box right under here."
+                 Text="The following guide will help you learn how to use the reposnsive Kinect display.  Hold out your hand towards the screen in order to be detected by the Kinect sensor.  A hand cursor will apear on screen when you are recognized.  This process may take a few seconds.  Try moving your cursor into the yellow region below."
                  VerticalAlignment="Top" Width="397" FontSize="21.333"/>
-            <Button x:Name="hoverTest" Content="Hover over Me" HorizontalAlignment="Left" Margin="638,292,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Height="67" Background="#FFFFA200" Click="next_Click" MouseMove="hoverTest_MouseMove" />
+            <Canvas Name="mainScreen" Background="white" Grid.Row="1" Height="100" Margin="608,297,123,179" >
+                <Button x:Name="hoverTest" Content="Hover over Me" HorizontalAlignment="Left" VerticalAlignment="Top" Width="228" Height="80" Background="#FFFFA200" Click="next_Click" MouseMove="hoverTest_MouseMove" Canvas.Left="10" Canvas.Top="10" />
+            </Canvas>
+            <Image x:Name="check" HorizontalAlignment="Left" Height="178" Margin="638,297,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Source="/Mod3-Project;component/Images/check.png" Visibility="Collapsed"/>
 
         </Grid>
     </k:KinectRegion>

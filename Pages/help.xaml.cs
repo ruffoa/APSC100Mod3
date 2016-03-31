@@ -16,9 +16,10 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
     using System.Windows.Media.Imaging;
     using System.Windows.Shapes;
     using Microsoft.Kinect.Wpf.Controls;
-    using Microsoft.Kinect;/// <summary>
-                           /// Interaction logic for CheckBoxRadioButtonSample
-                           /// </summary>
+    using Microsoft.Kinect;
+    using Microsoft.Kinect.Input;/// <summary>
+                                 /// Interaction logic for CheckBoxRadioButtonSample
+                                 /// </summary>
     public partial class Help : UserControl
     {
         /// <summary>
@@ -35,7 +36,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         // Other constructor stuff
         //  }
-
+        bool hoverCheck = false;
         int helpID = 1;
         int maxPage = 4;
 
@@ -58,11 +59,108 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             MediaPlayer.LoadedBehavior = MediaState.Manual;
             MediaPlayer.Play();
             MediaPlayer.MediaEnded += new RoutedEventHandler(MediaPlayer_OnMediaEnded);
-
+            this.Loaded += KinectPointerPointSample_Loaded;
 
         }
 
+        private async void delay(int msec)
+        {
+            //await Task.Delay(msec);
+        }
 
+        void KinectPointerPointSample_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Listen to Kinect pointer events
+            KinectCoreWindow kinectCoreWindow = KinectCoreWindow.GetForCurrentThread();
+            kinectCoreWindow.PointerMoved += kinectCoreWindow_PointerMoved;
+        }
+        private SolidColorBrush yellowBrush = Brushes.Yellow;
+        private TimeSpan lastTime;
+        private SolidColorBrush greenBrush = Brushes.Green;
+        private const double DotHeight = 60;
+        private const double DotWidth = 60;
+        private SolidColorBrush blackBrush = Brushes.Black;
+
+
+        private void kinectCoreWindow_PointerMoved(object sender, KinectPointerEventArgs args)
+        {
+            KinectPointerPoint kinectPointerPoint = args.CurrentPoint;
+            if (lastTime == TimeSpan.Zero || lastTime != kinectPointerPoint.Properties.BodyTimeCounter)
+            {
+                lastTime = kinectPointerPoint.Properties.BodyTimeCounter;
+                mainScreen.Children.Clear();
+            }
+
+            RenderPointer(kinectPointerPoint.Properties.IsEngaged,
+                kinectPointerPoint.Position,
+                kinectPointerPoint.Properties.UnclampedPosition,
+                kinectPointerPoint.Properties.HandReachExtent,
+                kinectPointerPoint.Properties.BodyTimeCounter,
+                kinectPointerPoint.Properties.BodyTrackingId,
+                kinectPointerPoint.Properties.HandType);
+        }
+        private void RenderPointer(
+            bool isEngaged,
+            PointF position,
+            PointF unclampedPosition,
+            float handReachExtent,
+            TimeSpan timeCounter,
+            ulong trackingId,
+            HandType handType)
+
+        {
+            StackPanel cursor = null;
+            if (cursor == null)
+            {
+                cursor = new StackPanel();
+                mainScreen.Children.Add(cursor);
+            }
+
+            cursor.Children.Clear();
+            var ellipseColor = isEngaged ? greenBrush : yellowBrush;
+
+            StackPanel sp = new StackPanel()
+            {
+                Margin = new Thickness(-5, -5, 0, 0),
+                Orientation = Orientation.Horizontal
+            };
+            sp.Children.Add(new Ellipse()
+            {
+                HorizontalAlignment = HorizontalAlignment.Left,
+                Height = DotHeight,
+                Width = DotWidth,
+                Margin = new Thickness(5),
+                Fill = ellipseColor
+            });
+            cursor.Children.Add(sp);
+
+           
+            Canvas.SetLeft(cursor, position.X * mainScreen.ActualWidth - DotWidth / 2);
+            Canvas.SetTop(cursor, position.Y * mainScreen.ActualHeight - DotHeight / 2);
+
+            Ellipse unclampedCursor = new Ellipse()
+            {
+                HorizontalAlignment = HorizontalAlignment.Left,
+                Height = 60,
+                Width = 60,
+                StrokeThickness = 5,
+                Stroke = blackBrush
+            };
+
+            mainScreen.Children.Add(unclampedCursor);
+            Canvas.SetLeft(unclampedCursor, unclampedPosition.X * mainScreen.ActualWidth - DotWidth / 2);
+            Canvas.SetTop(unclampedCursor, unclampedPosition.Y * mainScreen.ActualHeight - DotHeight / 2);
+            if (isEngaged == true && hoverCheck == false)
+            {
+                hoverCheck = true;
+                mainScreen.Visibility = Visibility.Collapsed;
+                check.Visibility = Visibility.Visible;
+                delay(1000);
+               // next_Click(sender, e);
+                next.Click += next_Click;
+
+            }
+        }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -188,5 +286,8 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             hoverTest.Visibility = Visibility.Collapsed;
             next_Click(sender, e);
         }
+
+       
+        
     }
 }
