@@ -3,27 +3,32 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                     xmlns:k="http://schemas.microsoft.com/kinect/2014"
+
       mc:Ignorable="d" Height="630.345" Width="979.388" KeyDown="UserControl_KeyDown"
 	>
 
     <UserControl.Background>
         <SolidColorBrush Color="White" Opacity="0.4"/>
     </UserControl.Background>
+    <k:KinectRegion x:Name="kinectRegion">
 
-    <Grid Background="White" Margin="0,0,0,-72">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Button x:Name="goBack" Content="Back to Home" HorizontalAlignment="Left" Margin="123,530,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Height="52" Background="#FF3DB93D" Click="goBack_Click"/>
-        <MediaElement x:Name="MediaPlayer" HorizontalAlignment="Left" Height="349" Margin="10,10,0,0" VerticalAlignment="Top" Width="527" Source="Videos/guide1.mp4" Grid.Row="1"/>
-        <TextBlock x:Name="instructions" HorizontalAlignment="Left" Margin="41,10,0,0" TextWrapping="Wrap" Text="How to Use This Interactive Display" VerticalAlignment="Top" FontSize="48"/>
-        <Button x:Name="next" Content="Next Instruction" HorizontalAlignment="Left" Margin="638,530,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Height="52" Background="#FF3DB93D" Click="next_Click"/>
-        <TextBox x:Name="scrollHelp" HorizontalAlignment="Left" Height="465" Margin="560,10,0,0" Grid.Row="1" TextWrapping="Wrap" 
+        <Grid Background="White" Margin="0,0,0,-46">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <k:KinectUserViewer Grid.Column="1" Height="100" HorizontalAlignment="Right" VerticalAlignment="Top" />
+
+            <Button x:Name="goBack" Content="Back to Home" HorizontalAlignment="Left" Margin="123,499,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Height="52" Background="#FF3DB93D" Click="goBack_Click"/>
+            <MediaElement x:Name="MediaPlayer" HorizontalAlignment="Left" Height="349" Margin="10,10,0,0" VerticalAlignment="Top" Width="527" Source="Videos/guide1.mp4" Grid.Row="1"/>
+            <TextBlock x:Name="instructions" HorizontalAlignment="Left" Margin="41,10,0,0" TextWrapping="Wrap" Text="How to Use This Interactive Display" VerticalAlignment="Top" FontSize="48"/>
+            <Button x:Name="next" Content="Next Instruction" HorizontalAlignment="Left" Margin="638,499,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Height="52" Background="#FF3DB93D" Click="next_Click"/>
+            <TextBox x:Name="scrollHelp" HorizontalAlignment="Left" Height="465" Margin="560,10,0,0" Grid.Row="1" TextWrapping="Wrap" 
                  Text="The following guide will help you learn how to use the reposnsive Kinect display.  Hold out your hand towards the screen in order to be detected by the Kinect sensor.  A hand cursor will apear on screen when you are recognized.  This process may take a few seconds.  Try hovering over the box right under here."
                  VerticalAlignment="Top" Width="397" FontSize="21.333"/>
-        <Button x:Name="hoverTest" Content="Hover over Me" HorizontalAlignment="Left" Margin="638,292,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Height="67" Background="#FFFFA200" Click="next_Click" MouseMove="hoverTest_MouseMove" />
+            <Button x:Name="hoverTest" Content="Hover over Me" HorizontalAlignment="Left" Margin="638,292,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Height="67" Background="#FFFFA200" Click="next_Click" MouseMove="hoverTest_MouseMove" />
 
-    </Grid>
-
+        </Grid>
+    </k:KinectRegion>
 </UserControl>

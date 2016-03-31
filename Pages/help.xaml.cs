@@ -15,9 +15,10 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
     using System.Windows.Media;
     using System.Windows.Media.Imaging;
     using System.Windows.Shapes;
-    /// <summary>
-    /// Interaction logic for CheckBoxRadioButtonSample
-    /// </summary>
+    using Microsoft.Kinect.Wpf.Controls;
+    using Microsoft.Kinect;/// <summary>
+                           /// Interaction logic for CheckBoxRadioButtonSample
+                           /// </summary>
     public partial class Help : UserControl
     {
         /// <summary>
@@ -41,6 +42,19 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         public Help()
         {
             this.InitializeComponent();
+            KinectRegion.SetKinectRegion(this, kinectRegion);
+
+            App app = ((App)Application.Current);
+            app.KinectRegion = kinectRegion;
+
+            // Use the default sensor
+            this.kinectRegion.KinectSensor = KinectSensor.GetDefault();
+
+            //// Add in display content
+            
+
+            
+
             MediaPlayer.LoadedBehavior = MediaState.Manual;
             MediaPlayer.Play();
             MediaPlayer.MediaEnded += new RoutedEventHandler(MediaPlayer_OnMediaEnded);
@@ -77,20 +91,24 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             {
                 MainWindow nmain = new MainWindow();
                 nmain.Show();
+                MainWindow.inHelp = false;
+                MainWindow.openHelp = false;
+                MainWindow.usertimer.Enabled = true;
+
                 ControlsBasics.MainWindow.CloseWindow();
 
             }
 
-
+            MainWindow.inHelp = false;
+            MainWindow.openHelp = false;
+           // MainWindow.detectedUsers = 0;
+           // MainWindow.nusers = 0;
+           MainWindow.usertimer.Enabled = true;
             ControlsBasics.MainWindow.CloseWindow();
            
         }
 
-        private void Close()
-        {
-            
-           
-        }
+       
 
         private void UserControl_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {

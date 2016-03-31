@@ -15,9 +15,12 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
     using System.Windows.Input;
     using System.Timers;
     using System.Collections;
-    using System.IO;    /// <summary>
-                        /// Interaction logic for MainWindow
-                        /// </summary>
+    using System.IO;
+    using System.Collections.Generic;
+    using System.Threading;
+    using System.Threading.Tasks;/// <summary>
+                                 /// Interaction logic for MainWindow
+                                 /// </summary>
     public partial class MainWindow
     {
         public static MainWindow m_Singleton = new ControlsBasics.MainWindow();
@@ -27,7 +30,15 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         public static bool user = false;
         public static System.Timers.Timer aTimer = new System.Timers.Timer();
+        public static System.Timers.Timer usertimer = new System.Timers.Timer();
 
+        public static IList<Body> _bodies;
+        public static int nusers = 0;
+        public static int detectedUsers = 0;
+        public static bool timerGoing = false;
+        public static bool openHelp = false;
+        public static bool inHelp = false;
+        public static bool userpresent = false;
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class. 
         /// </summary>
@@ -47,9 +58,30 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             var sampleDataSource = SampleDataSource.GetGroup("Group-1");
             this.itemsControl.ItemsSource = sampleDataSource;
 
-            checkActive();
+            KinectSensor _sensor;
+            MultiSourceFrameReader _reader;
+            _sensor = KinectSensor.GetDefault();
+            //nusers = 0;
+
+            if (_sensor != null)
+            {
+                _sensor.Open();
+            }
+
+            _reader = _sensor.OpenMultiSourceFrameReader(FrameSourceTypes.Color |
+                                             FrameSourceTypes.Depth |
+                                             FrameSourceTypes.Infrared |
+                                             FrameSourceTypes.Body);
+            _reader.MultiSourceFrameArrived += Reader_MultiSourceFrameArrived;
+
+            //checkActive();
+
         }
 
+        private async void delay1(int msec)
+        {
+            await Task.Delay(msec);
+        }
         /// <summary>
         /// Handle a button click from the wrap panel.
         /// </summary>
@@ -84,20 +116,123 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             }
         }
 
-        public void checkActive()
+        void Reader_MultiSourceFrameArrived(object sender, MultiSourceFrameArrivedEventArgs e)
         {
-            if (kinectRegion.EngagedBodyTrackingIds.Count == 0)
-            {
+            if (inHelp == false)
+            { 
+            var reference = e.FrameReference.AcquireFrame();
+            nusers = 0;
+            userpresent = false;
+                // Body
+                using (var frame = reference.BodyFrameReference.AcquireFrame())
+                {
+                    if (frame != null)
+                    {
+                        _bodies = new Body[frame.BodyFrameSource.BodyCount];
 
+                        frame.GetAndRefreshBodyData(_bodies);
+                        // nusers = frame.BodyFrameSource.BodyCount;
+                        foreach (var body in _bodies)
+                        {
+                            if (body != null)
+                            {
+                                if (body.IsTracked)
+                                {
+                                    nusers += 1;
+                                    userpresent = true;
+                                }
+
+                            }
+
+                        }
+                    }
+                }
+                userCheck();
+
+            }
+        }
+
+        public void userCheck()
+        {
+            delay1(100);
+            if (openHelp == true && inHelp == false)
+            {
+                inHelp = true;
+
+                string myString = detectedUsers.ToString();
+                string s2 = userpresent.ToString();
+
+                //MessageBox.Show(myString + " bool: " + s2);
+                //MessageBox.Show("Launching");
+
+                //timerGoing = false;
+
+                //Application.Current.Dispatcher.Invoke((Action)delegate
+                // {
+                //     MainWindow mainWindow = new MainWindow();
+                //     mainWindow.Show();
+                // });
+                //myString = inHelp.ToString();
+
+                //Help mynewPage = new Help();  //newPage is the name of the newPage.xaml file    
+                //this.Content = mynewPage;
+                
+                var key = Key.End;                    // Key to send
+                var target = Keyboard.FocusedElement;    // Target element
+                var routedEvent = Keyboard.KeyDownEvent; // Event to send
+                target.RaiseEvent(new System.Windows.Input.KeyEventArgs(Keyboard.PrimaryDevice,
+ System.Windows.PresentationSource.FromVisual((System.Windows.Media.Visual)target), 0, key)
+                { RoutedEvent = routedEvent });
+
+                //MessageBox.Show("in help!" + myString);
+                detectedUsers = 0;
+                
+                
             }
             else
             {
-                Help mynewPage = new Help(); //newPage is the name of the newPage.xaml file
+                if (timerGoing == false && openHelp == false && inHelp == false)
+                {
+                    usertimer.Elapsed += new System.Timers.ElapsedEventHandler(checkActive);
+                    //aTimer.Interval = 60000;
+                    usertimer.Interval = 5000;
+                    usertimer.Enabled = true;
+                    detectedUsers += nusers;
+                    timerGoing = true;
+                }
+                else if (detectedUsers < 1000)
+                {
+                    detectedUsers += nusers;
+                    openHelp = false;
+                }
+            }
+           
 
-                this.Content = mynewPage;
+        }
+
+        public void checkActive(object sender, ElapsedEventArgs e)
+        {
+            
+            if (detectedUsers > 0)
+            {
+                string myString = detectedUsers.ToString();
+                string s2 = openHelp.ToString();
+                string s3 = inHelp.ToString();
+                detectedUsers = 0;
+                //MessageBox.Show(myString + " open: " + s2 + " inHelp: " + s3);
+                delay1(100);
+                //timerGoing = false;
+                openHelp = false;
+            }
+            else
+            {
+               string myString = inHelp.ToString();
+                openHelp = true;
+                usertimer.Enabled = false;
+              // MessageBox.Show("Open" + myString);
             }
         }
-       
+
         /// <summary>
         /// Handle the back button click.
         /// </summary>
