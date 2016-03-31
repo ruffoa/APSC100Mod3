@@ -24,7 +24,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         //public static string password = "ecei";
         // password = ControlsBasics.Properties.Settings.Default.password
         public static string password = Properties.Settings.Default.password;
-        
+
         public static bool user = false;
         public static System.Timers.Timer aTimer = new System.Timers.Timer();
 
@@ -46,7 +46,8 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             //// Add in display content
             var sampleDataSource = SampleDataSource.GetGroup("Group-1");
             this.itemsControl.ItemsSource = sampleDataSource;
-            
+
+            checkActive();
         }
 
         /// <summary>
@@ -83,6 +84,20 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             }
         }
 
+        public void checkActive()
+        {
+            if (kinectRegion.EngagedBodyTrackingIds.Count == 0)
+            {
+
+            }
+            else
+            {
+                Help mynewPage = new Help(); //newPage is the name of the newPage.xaml file
+
+                this.Content = mynewPage;
+            }
+        }
+       
         /// <summary>
         /// Handle the back button click.
         /// </summary>
@@ -105,24 +120,26 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
                     this.Content = mynewPage;
                 }
-                    // MessageBox.Show("key detected");
+                // MessageBox.Show("key detected");
 
-            else
+                else
                 {
                     Login mynewPage = new Login(); //newPage is the name of the newPage.xaml file
 
                     this.Content = mynewPage;
 
-                    
+
                 }
-                    
-               
+
+
             }
 
             if (e.Key == System.Windows.Input.Key.End)
             {
                 // MessageBox.Show("key detected");
+                Help mynewPage = new Help(); //newPage is the name of the newPage.xaml file
 
+                this.Content = mynewPage;
             }
 
         }
@@ -149,7 +166,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         }
 
-       
+
 
         public static MainWindow CloseWindow()
         {
@@ -157,7 +174,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             MainWindow nll = null;
             MainWindow mainWindow = ControlsBasics.MainWindow.GetMainWindow();
             //mainWindow.Close();
-            
+
             var winctr = Application.Current.Windows.Count;
             string myString = winctr.ToString();
 
@@ -167,12 +184,12 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                 App.Current.Windows[intCounter].Close();
                 string winID = intCounter.ToString();
 
-              // MessageBox.Show("window closed" + winID);
+                // MessageBox.Show("window closed" + winID);
             }
 
-         //MessageBox.Show(myString);
-         
-            
+            //MessageBox.Show(myString);
+
+
             return nll;
         }
 
@@ -212,7 +229,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             var key = Key.Home;                    // Key to send
             var target = Keyboard.FocusedElement;    // Target element
             var routedEvent = Keyboard.KeyDownEvent; // Event to send
-            
+
             target.RaiseEvent(new System.Windows.Input.KeyEventArgs(Keyboard.PrimaryDevice,
   System.Windows.PresentationSource.FromVisual((System.Windows.Media.Visual)target), 0, key)
             { RoutedEvent = routedEvent });
@@ -243,6 +260,5 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             return winctr;
         }
 
-
     }
-}
+    }

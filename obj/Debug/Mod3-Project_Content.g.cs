@@ -8,6 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("videos/guide1.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("videos/guide2.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("videos/guide3a.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("videos/guide3b.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("videos/guide4.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("videos/guide5.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("videos/kinect-swipe.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("videos/video1.mp4")]
 
 

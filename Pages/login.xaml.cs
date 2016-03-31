@@ -129,18 +129,13 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                 status.Source = new BitmapImage(new Uri(@"/Images/check.png", UriKind.Relative));
                 textStatus.Text = "Login Successful!";
                 passBox.Text = "";
-
-                
+              
                 await Task.Delay(1000);
-                
 
                 MainWindow mainWindow = ControlsBasics.MainWindow.GetMainWindow();
-
                 mainWindow.Show();
-
                 ControlsBasics.MainWindow.LoginCMS();
-
-                //this.Close();
+                
             }
             else
             {
@@ -174,7 +169,10 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                 textStatus.Text = "Password Successfully Changed to " + MainWindow.password + "!";
                 await Task.Delay(1000);
                 textStatus.Text = "Password Successfully Changed";
-                passChange.Background = System.Windows.Media.Brushes.Gray;
+                passChange.Background = System.Windows.Media.Brushes.LightGray;
+                loginButton.Background = System.Windows.Media.Brushes.LightGray;
+                passBox.Text = "";
+                changePass = false;
             }
             else
             {
@@ -200,9 +198,14 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         {
             if (e.Key == System.Windows.Input.Key.Enter)
 
-            {
+                if (changePass == true)
+                {
+                    passChange_Click(sender, e);
+                }
+            else
+                {
                 login_click(sender, e);
-            }
+                }
 
         }
     }

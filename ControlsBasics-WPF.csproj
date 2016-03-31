@@ -96,6 +96,9 @@
     <Compile Include="Common\BindableBase.cs" />
     <Compile Include="DataModel\SampleDataSource.cs" />
     <Compile Include="HandPointers\HandInScreenEngagementModel.cs" />
+    <Compile Include="Pages\help.xaml.cs">
+      <DependentUpon>help.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\login.xaml.cs">
       <DependentUpon>login.xaml</DependentUpon>
     </Compile>
@@ -159,6 +162,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\help.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\login.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -323,6 +330,29 @@
     <Resource Include="Images\admin.png" />
     <Resource Include="Images\list.png" />
     <Resource Include="DataModel\data.txt" />
+    <Resource Include="Images\login.gif" />
+    <Resource Include="hcAssets\img1.png" />
+    <Content Include="Videos\guide1.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\guide2.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\guide3a.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\guide3b.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\guide4.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\guide5.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\kinect-swipe.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Videos\video1.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

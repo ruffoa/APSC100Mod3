@@ -4,10 +4,10 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:k="http://schemas.microsoft.com/kinect/2014"
-      mc:Ignorable="d" Height="300" Width="300"
+      mc:Ignorable="d" Height="563.334" Width="1085"
 	  >
 
-    <Grid Margin="0,0,10,0" >
+    <Grid Margin="0,0,10,10" >
         <Grid.Background>
             <SolidColorBrush Color="White" Opacity="0.4"/>
         </Grid.Background>
@@ -19,21 +19,22 @@
         <!-- Page title -->
         <TextBlock x:Name="pageTitle" Grid.Column="1" Text="Museum Info Test Page" 
                    Margin="10 0 10 0" />
-        <ScrollViewer HorizontalAlignment="Left" Height="248" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280" 
+        <ScrollViewer HorizontalAlignment="Left" Height="501" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="1055" 
                      HorizontalScrollBarVisibility="Auto" k:KinectRegion.IsHorizontalRailEnabled="true" k:KinectRegion.IsVerticalRailEnabled="False"
-                      k:KinectRegion.ZoomMode="Disabled">
+                      k:KinectRegion.ZoomMode="Enabled">
             <Grid Width="1390">
-                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="73" Margin="10,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
-                <Image x:Name="image" HorizontalAlignment="Left" Height="150" Margin="237,10,0,0" VerticalAlignment="Top" Width="209" Source="/ControlsBasics-WPF;component/Assets/EngSoc.png"/>
-                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="73" Margin="237,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
-                <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="150" Margin="464,10,0,0" VerticalAlignment="Top" Width="209" Source="/ControlsBasics-WPF;component/Images/fireworks.jpg"/>
-                <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="73" Margin="464,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
-                <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="150" Margin="695,10,0,0" VerticalAlignment="Top" Width="209" Source="/ControlsBasics-WPF;component/Assets/sci19-1080.png"/>
-                <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Height="73" Margin="695,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
-                <Image x:Name="image_Copy2" HorizontalAlignment="Left" Height="150" Margin="928,10,0,0" VerticalAlignment="Top" Width="209" Source="/ControlsBasics-WPF;component/Images/sydney.jpg"/>
-                <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Height="73" Margin="928,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
-                <Image x:Name="image_Copy3" HorizontalAlignment="Left" Height="150" Margin="1163,10,0,0" VerticalAlignment="Top" Width="209" Source="/ControlsBasics-WPF;component/Images/space-back.jpg"/>
-                <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Height="73" Margin="1163,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
+                <Image x:Name="image1" HorizontalAlignment="Left" Height="150" Margin="10,10,0,0" VerticalAlignment="Top" Width="191" Source="/hcAssets/img1.png"/>
+                <TextBlock x:Name="text1" HorizontalAlignment="Left" Height="309" Margin="10,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" FontSize="21.333"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
+                <Image x:Name="image" HorizontalAlignment="Left" Height="150" Margin="237,10,0,0" VerticalAlignment="Top" Width="209" Source="/Assets/EngSoc.png"/>
+                <TextBlock x:Name="text2" HorizontalAlignment="Left" Height="309" Margin="237,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" FontSize="21.333"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
+                <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="150" Margin="464,10,0,0" VerticalAlignment="Top" Width="209" Source="Images/fireworks.jpg"/>
+                <TextBlock x:Name="text3" HorizontalAlignment="Left" Height="309" Margin="464,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" FontSize="21.333"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
+                <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="150" Margin="695,10,0,0" VerticalAlignment="Top" Width="209" Source="Assets/sci19-1080.png"/>
+                <TextBlock x:Name="text4" HorizontalAlignment="Left" Height="309" Margin="695,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" FontSize="21.333"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
+                <Image x:Name="image_Copy2" HorizontalAlignment="Left" Height="150" Margin="928,10,0,0" VerticalAlignment="Top" Width="209" Source="Images/sydney.jpg"/>
+                <TextBlock x:Name="text5" HorizontalAlignment="Left" Height="309" Margin="928,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" FontSize="21.333"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
+                <Image x:Name="image_Copy3" HorizontalAlignment="Left" Height="150" Margin="1163,10,0,0" VerticalAlignment="Top" Width="209" Source="Images/space-back.jpg"/>
+                <TextBlock x:Name="text6" HorizontalAlignment="Left" Height="309" Margin="1163,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
             </Grid>
         </ScrollViewer>
 
