@@ -17,9 +17,11 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
     using System.Windows.Shapes;
     using Microsoft.Kinect.Wpf.Controls;
     using Microsoft.Kinect;
-    using Microsoft.Kinect.Input;/// <summary>
-                                 /// Interaction logic for CheckBoxRadioButtonSample
-                                 /// </summary>
+    using Microsoft.Kinect.Input;
+    using System.Threading.Tasks;
+    using DataModel;/// <summary>
+                    /// Interaction logic for CheckBoxRadioButtonSample
+                    /// </summary>
     public partial class Help : UserControl
     {
         /// <summary>
@@ -60,12 +62,13 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             MediaPlayer.Play();
             MediaPlayer.MediaEnded += new RoutedEventHandler(MediaPlayer_OnMediaEnded);
             this.Loaded += KinectPointerPointSample_Loaded;
-
+            var sampleDataSource = SampleDataSource.GetGroup("Group-1");
+            this.itemsControl.ItemsSource = sampleDataSource;
         }
 
         private async void delay(int msec)
         {
-            //await Task.Delay(msec);
+            await Task.Delay(msec);
         }
 
         void KinectPointerPointSample_Loaded(object sender, RoutedEventArgs e)
@@ -80,7 +83,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         private const double DotHeight = 60;
         private const double DotWidth = 60;
         private SolidColorBrush blackBrush = Brushes.Black;
-
+        private int handctr = 0;
 
         private void kinectCoreWindow_PointerMoved(object sender, KinectPointerEventArgs args)
         {
@@ -99,7 +102,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                 kinectPointerPoint.Properties.BodyTrackingId,
                 kinectPointerPoint.Properties.HandType);
         }
-        private void RenderPointer(
+        private async void RenderPointer(
             bool isEngaged,
             PointF position,
             PointF unclampedPosition,
@@ -110,10 +113,11 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         {
             StackPanel cursor = null;
-            if (cursor == null)
+            if (cursor == null)//&& handctr < 2)
             {
                 cursor = new StackPanel();
                 mainScreen.Children.Add(cursor);
+                handctr += 1;
             }
 
             cursor.Children.Clear();
@@ -134,30 +138,37 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             });
             cursor.Children.Add(sp);
 
-           
+
             Canvas.SetLeft(cursor, position.X * mainScreen.ActualWidth - DotWidth / 2);
             Canvas.SetTop(cursor, position.Y * mainScreen.ActualHeight - DotHeight / 2);
 
-            Ellipse unclampedCursor = new Ellipse()
-            {
-                HorizontalAlignment = HorizontalAlignment.Left,
-                Height = 60,
-                Width = 60,
-                StrokeThickness = 5,
-                Stroke = blackBrush
-            };
+            //Ellipse unclampedCursor = new Ellipse()
+            //{
+            //    HorizontalAlignment = HorizontalAlignment.Left,
+            //    Height = 60,
+            //    Width = 60,
+            //    StrokeThickness = 5,
+            //    Stroke = blackBrush
+            //};
 
-            mainScreen.Children.Add(unclampedCursor);
-            Canvas.SetLeft(unclampedCursor, unclampedPosition.X * mainScreen.ActualWidth - DotWidth / 2);
-            Canvas.SetTop(unclampedCursor, unclampedPosition.Y * mainScreen.ActualHeight - DotHeight / 2);
+            //mainScreen.Children.Add(unclampedCursor);
+            //Canvas.SetLeft(unclampedCursor, unclampedPosition.X * mainScreen.ActualWidth - DotWidth / 2);
+            //Canvas.SetTop(unclampedCursor, unclampedPosition.Y * mainScreen.ActualHeight - DotHeight / 2);
             if (isEngaged == true && hoverCheck == false)
             {
                 hoverCheck = true;
                 mainScreen.Visibility = Visibility.Collapsed;
+
                 check.Visibility = Visibility.Visible;
-                delay(1000);
-               // next_Click(sender, e);
-                next.Click += next_Click;
+                //delay(1000);
+                await Task.Delay(2500);
+
+
+                check.Visibility = Visibility.Collapsed;
+
+
+                next_Click(new object(), new RoutedEventArgs());
+
 
             }
         }
@@ -235,6 +246,8 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         }
 
+
+
         private void next_Click(object sender, RoutedEventArgs e)
         {
             if (helpID < maxPage)
@@ -246,6 +259,9 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                 helpID = 1;
                 next.Content = "Next Instruction";
                 next.Background = System.Windows.Media.Brushes.Green;
+                goBack.Content = "Home";
+                hoverCheck = false;
+                photoEx.Visibility = Visibility.Collapsed;
             }
                 if (helpID == 1)
             {
@@ -261,12 +277,14 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             {
                 scrollHelp.Text = "To select an item, push it and then pull back";
                 MediaPlayer.Source = new Uri(@"Videos/guide3a.mp4",UriKind.Relative);
-
+                testClick.Visibility = Visibility.Visible;
             }
             if (helpID == 3)
             {
+                check.Visibility = Visibility.Collapsed;
                 scrollHelp.Text = "To scroll in menus, hold out your hand and let your pointer appear on screen.  Then clench your hand and make a fist, and once the on screen avatar does the same thing, move your arm across the screen as if your were grabbing the screen and pulling it.";
                 MediaPlayer.Source = new Uri(@"Videos/guide4.mp4", UriKind.Relative);
+                scrollViewer.Visibility = Visibility.Visible;
 
             }
             if (helpID == 4)
@@ -274,20 +292,21 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                 scrollHelp.Text = "To zoom in and out on pictures (when allowed), grab the picture with a fist, and then pull the screen towards you.  To zoom out, push the screen away.";
                 MediaPlayer.Source = new Uri(@"Videos/guide5.mp4", UriKind.Relative);
                 next.Content = "Start Over";
+                goBack.Content = "Let's Start!";
                 next.Background = System.Windows.Media.Brushes.Red;
+                scrollViewer.Visibility = Visibility.Collapsed;
+                photoEx.Visibility = Visibility.Visible;
 
             }
 
         }
 
-        private void hoverTest_MouseMove(object sender, MouseEventArgs e)
+        private void button_Click(object sender, RoutedEventArgs e)
         {
-           // helpID += 1;
-            hoverTest.Visibility = Visibility.Collapsed;
-            next_Click(sender, e);
-        }
+            testClick.Visibility = Visibility.Collapsed;
+            check.Visibility = Visibility.Visible;
+            //delay(1000);
 
-       
-        
+        }
     }
 }

@@ -7,14 +7,18 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Mod3-Project.exe.manifest" size="8537">
+    <dependentAssembly dependencyType="install" codebase="Mod3-Project.exe.manifest" size="8538">
       <assemblyIdentity name="Mod3-Project.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>PNB/RHkJ71U2axvw+30ogxgx/x+PKHxUoWCRMEyv4Pg=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>3tKJRBwWiTzBHvB1QX+Di5dJeWc+Qf1rUWcsYbXHAi4=</dsig:DigestValue>
+>>>>>>> 56a9b47202cf14fc2f53ee01813284f7040e53e4
       </hash>
     </dependentAssembly>
   </dependency>

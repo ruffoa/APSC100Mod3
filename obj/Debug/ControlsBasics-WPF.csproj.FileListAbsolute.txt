@@ -107,7 +107,6 @@ D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Microsoft.Kinect.x
 D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Microsoft.Kinect.Wpf.Controls.xml
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Common\StandardStyles.baml
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\HandPointers\HandPointerStyles.baml
-D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\help.baml
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\login.baml
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\CMS.baml
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\videoPlayer.baml
@@ -126,6 +125,7 @@ D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\MainWindow.g.cs
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\help.g.cs
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\login.g.cs
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\CMS.g.cs
+D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\QuizPage.g.cs
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\videoPlayer.g.cs
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\ButtonSample.g.cs
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\playground.g.cs
@@ -143,6 +143,8 @@ D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Mod3-Project_Content.g.cs
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Mod3-Project_MarkupCompile.cache
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Mod3-Project_MarkupCompile.lref
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\MainWindow.baml
+D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\help.baml
+D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\QuizPage.baml
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\TestPage.baml
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Mod3-Project.g.resources
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Microsoft.Samples.Kinect.ControlsBasics.Properties.Resources.resources

@@ -9,12 +9,21 @@ Microsoft.Samples.Kinect.ControlsBasics
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\Sean Lee\Desktop\Dank 3\APSC100Mod3\App.xaml
 18393269803
 81363886288
 241387704621
 15903302081
 Common\StandardStyles.xaml;HandPointers\HandPointerStyles.xaml;MainWindow.xaml;Pages\help.xaml;Pages\login.xaml;Pages\CMS.xaml;Pages\videoPlayer.xaml;Pages\ButtonSample.xaml;Pages\playground.xaml;Pages\CheckBoxRadioButtonSample.xaml;Pages\EngagementSettings.xaml;Pages\ItemsControlsSample.xaml;Pages\KinectPointerPointSample.xaml;Pages\InfoPage.xaml;Pages\TestPage.xaml;Pages\ScrollViewerSample.xaml;Pages\SliderSample.xaml;SelectionDisplay.xaml;
+=======
+D:\School\QueensU Year 1\Mod 3\Final Project\App.xaml
+19655631911
+81363886288
+25-1550887225
+14-1238715186
+Common\StandardStyles.xaml;HandPointers\HandPointerStyles.xaml;MainWindow.xaml;Pages\help.xaml;Pages\login.xaml;Pages\CMS.xaml;Pages\QuizPage.xaml;Pages\videoPlayer.xaml;Pages\ButtonSample.xaml;Pages\playground.xaml;Pages\CheckBoxRadioButtonSample.xaml;Pages\EngagementSettings.xaml;Pages\ItemsControlsSample.xaml;Pages\KinectPointerPointSample.xaml;Pages\InfoPage.xaml;Pages\TestPage.xaml;Pages\ScrollViewerSample.xaml;Pages\SliderSample.xaml;SelectionDisplay.xaml;
+>>>>>>> 56a9b47202cf14fc2f53ee01813284f7040e53e4
 
 False
 

@@ -25,7 +25,7 @@
                       HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
                       k:KinectRegion.IsHorizontalRailEnabled="true" k:KinectRegion.IsVerticalRailEnabled="true"
                       k:KinectRegion.ZoomMode="Enabled">
-            <Image Stretch="None" Grid.Column="0" Grid.Row="0" Source="/ControlsBasics-WPF;component/Images/space-back.jpg" />
+            <Image Stretch="None" Grid.Column="0" Grid.Row="0" Source="Images/space-back.jpg" />
         </ScrollViewer>
     </Grid>
 </UserControl>
