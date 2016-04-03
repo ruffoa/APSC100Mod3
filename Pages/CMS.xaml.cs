@@ -12,6 +12,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
     using System.Windows.Navigation;
     using System;
     using System.Collections.Generic;
+    using System.IO;
     /// <summary>
     /// Interaction logic for CheckBoxRadioButtonSample
     /// </summary>
@@ -40,17 +41,46 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             qInfo.Text = "Editing Question Number " + (questionNumber + 1) + " of " + Properties.Settings.Default.questionNum;
         }
 
+        string tempPath;
+        string sourceFileName;
 
         private void bOpenFileDialog_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            System.Windows.Forms.OpenFileDialog openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 
             openFileDialog1.Filter = "All Files (*.*)|*.*";
             openFileDialog1.FilterIndex = 1;
 
             openFileDialog1.Multiselect = true;
 
-            bool? userClickedOK = openFileDialog1.ShowDialog();
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                sourceFileName = openFileDialog1.FileName.ToString();
+                textBox1.Text = openFileDialog1.FileName;
+            }
+
+        }
+
+        private void editBut_Click(object sender, RoutedEventArgs e)
+        {
+            System.IO.File.Copy(sourceFileName, tempPath, true);
+        }
+
+        private void chooseOpen_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Forms.OpenFileDialog openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+
+            openFileDialog2.Filter = "All Files (*.*)|*.*";
+            openFileDialog2.FilterIndex = 1;
+
+            openFileDialog2.Multiselect = true;
+
+            if (openFileDialog2.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                textBox2.Text = openFileDialog2.FileName;
+                tempPath = openFileDialog2.FileName; ;
+            }
+
 
         }
 
@@ -271,5 +301,6 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             fileChange.Visibility = Visibility.Visible;
             quizChange.Visibility = Visibility.Collapsed;
         }
+
     }
 }
