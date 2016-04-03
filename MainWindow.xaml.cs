@@ -185,8 +185,6 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
  System.Windows.PresentationSource.FromVisual((System.Windows.Media.Visual)target), 0, key)
                 { RoutedEvent = routedEvent });
 
-               // ControlsBasicsWindow_KeyDown(new object(), new KeyEventArgs());
-
                 //MessageBox.Show("in help!" + myString);
                 detectedUsers = 0;
                 
@@ -252,6 +250,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         {
             if (e.Key == System.Windows.Input.Key.Home)
             {
+                inHelp = true;
                 if (user == true)
                 {
                     CMS mynewPage = new CMS(); //newPage is the name of the newPage.xaml file
@@ -358,7 +357,9 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         public static void LoginCMS()
         {
+            //await Task.Delay(100);
             CloseAllButMain();
+            //App.Current.Windows[0].Close();
 
             aTimer.Elapsed += new System.Timers.ElapsedEventHandler(OnTimedEvent);
             aTimer.Interval = 300000;
