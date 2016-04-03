@@ -67,14 +67,22 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Mod3-Project.exe" size="10387912">
+=======
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Mod3-Project.exe" size="10387456">
+>>>>>>> c220e4e02c2547bcbf77271874f559495fe0ecd9
       <assemblyIdentity name="Mod3-Project" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>pLCVAr1vnUTNf6NbEWP8wz5oPsvlH+VUEJSSutPmHXQ=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>5aw7V1AxTri6K/n6SRu+FdmBfkz51RASDsUA/rgzVM0=</dsig:DigestValue>
+>>>>>>> c220e4e02c2547bcbf77271874f559495fe0ecd9
       </hash>
     </dependentAssembly>
   </dependency>
