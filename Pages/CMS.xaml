@@ -37,7 +37,7 @@
             <Button x:Name="QuestionMode" Content="Edit Quiz Questions" HorizontalAlignment="Left" Margin="379,205,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Height="30" Background="#FF3DB93D" Click="QuestionMode_Click"/>
         </Grid>
         <Grid Name="quizChange" Grid.RowSpan="2" Visibility="Collapsed">
-            <Button x:Name="qSave" Content="Save Changes" Height="30" Width="191" Margin="40,529,0,0" 
+            <Button x:Name="qSave" Content="Save Changes" Height="30" Width="191" Margin="40,500,0,0" 
         	HorizontalAlignment="Left" VerticalAlignment="Top" Click="ansdChange_Click" />
             <TextBox x:Name="ansA" HorizontalAlignment="Left" Height="30" Margin="265,258,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="676" TextChanged="textBox_TextChanged"/>
             <TextBox x:Name="ansB" HorizontalAlignment="Left" Height="30" Margin="265,313,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="676" TextChanged="textBox_TextChanged"/>
@@ -45,11 +45,11 @@
             <TextBox x:Name="ansD" HorizontalAlignment="Left" Height="30" Margin="265,423,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="676" TextChanged="textBox_TextChanged"/>
             <TextBox x:Name="questionText" HorizontalAlignment="Left" Height="133" Margin="265,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="676" TextChanged="textBox_TextChanged"/>
             <TextBlock x:Name="qInfo" HorizontalAlignment="Left" Margin="40,42,0,0" TextWrapping="Wrap" Text="Editing Question Number" VerticalAlignment="Top" Width="586"/>
-            <Button x:Name="addQuestion" Content="Add New Question" Height="30" Width="191" Margin="265,529,0,0" 
+            <Button x:Name="addQuestion" Content="Add New Question" Height="30" Width="191" Margin="265,500,0,0" 
             	HorizontalAlignment="Left" VerticalAlignment="Top" Click="addQuestion_Click" />
-            <Button x:Name="deleteQuestion" Content="Delete Question" Height="30" Width="191" Margin="499,529,0,0" 
+            <Button x:Name="deleteQuestion" Content="Delete Question" Height="30" Width="191" Margin="499,500,0,0" 
             	HorizontalAlignment="Left" VerticalAlignment="Top" Click="deleteQuestion_Click" />
-            <ComboBox x:Name="qSelector" HorizontalAlignment="Left" Text="Go to Question" Margin="733,529,0,0" VerticalAlignment="Top" Width="208" Height="30" DropDownOpened="comboBox_DropDownOpened" SelectionChanged="qSelector_SelectionChanged"/>
+            <ComboBox x:Name="qSelector" HorizontalAlignment="Left" Text="Go to Question" Margin="733,500,0,0" VerticalAlignment="Top" Width="208" Height="30" DropDownOpened="comboBox_DropDownOpened" SelectionChanged="qSelector_SelectionChanged"/>
             <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="93,142,0,0" TextWrapping="Wrap" Text="Question" VerticalAlignment="Top" Height="48" Width="133"/>
             <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="93,423,0,0" TextWrapping="Wrap" Text="Answer D" VerticalAlignment="Top" Height="30" Width="133"/>
             <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="93,373,0,0" TextWrapping="Wrap" Text="Answer C" VerticalAlignment="Top" Height="30" Width="133"/>
@@ -60,6 +60,8 @@
             <RadioButton x:Name="selB" Content="" Tag="b" HorizontalAlignment="Left" Margin="40,331,0,0" VerticalAlignment="Top" Height="16" Width="21" Checked="selB_Checked"/>
             <RadioButton x:Name="selC" Content="" Tag="c" HorizontalAlignment="Left" Margin="40,383,0,0" VerticalAlignment="Top" Height="16" Width="21" Checked="selC_Checked"/>
             <RadioButton x:Name="selD" Content="" Tag="d" HorizontalAlignment="Left" Margin="40,432,0,0" VerticalAlignment="Top" Height="16" Width="21" Checked="selD_Checked"/>
+            <Button x:Name="goBack1" Content="Back to Home" HorizontalAlignment="Left" Margin="258,568,0,0" VerticalAlignment="Top" Width="198" Height="30" Background="#FF3DB93D" Click="goBack_Click"/>
+            <Button x:Name="fileMode" Content="Edit Files" HorizontalAlignment="Left" Margin="499,568,0,0" VerticalAlignment="Top" Width="198" Height="30" Background="#FF3DB93D" Click="fileMode_Click"/>
 
 
         </Grid>

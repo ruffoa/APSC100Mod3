@@ -265,5 +265,11 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         {
             selAns = "d";
         }
+
+        private void fileMode_Click(object sender, RoutedEventArgs e)
+        {
+            fileChange.Visibility = Visibility.Visible;
+            quizChange.Visibility = Visibility.Collapsed;
+        }
     }
 }

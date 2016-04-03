@@ -82,24 +82,28 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         private async void ansD_Click(object sender, RoutedEventArgs e)
         {
-            rightAns = Properties.Settings.Default.CorrectAns[currentQuestion];
-            if (rightAns == "d")
+            int qnum = Properties.Settings.Default.questions.Count;
+            if (qnum > 1 && currentQuestion <= qnum)
             {
-                correct.Source = new BitmapImage(new Uri(@"/Images/check.png", UriKind.Relative));
-                correct.Visibility = Visibility.Visible;
-                await Task.Delay(1000);
-                correct.Visibility = Visibility.Collapsed;
-                currentQuestion += 1;
-            }
-            else
-            {
-                correct.Source = new BitmapImage(new Uri(@"/Images/error.png", UriKind.Relative));
-                pageTitle.Text = "Correct Answer was: " + rightAns;
-                correct.Visibility = Visibility.Visible;
+                rightAns = Properties.Settings.Default.CorrectAns[currentQuestion];
+                if (rightAns == "d")
+                {
+                    correct.Source = new BitmapImage(new Uri(@"/Images/check.png", UriKind.Relative));
+                    correct.Visibility = Visibility.Visible;
                     await Task.Delay(1000);
                     correct.Visibility = Visibility.Collapsed;
                     currentQuestion += 1;
-                pageTitle.Text = "Quiz Game";
+                }
+                else
+                {
+                    correct.Source = new BitmapImage(new Uri(@"/Images/error.png", UriKind.Relative));
+                    pageTitle.Text = "Correct Answer was: " + rightAns;
+                    correct.Visibility = Visibility.Visible;
+                    await Task.Delay(1000);
+                    correct.Visibility = Visibility.Collapsed;
+                    currentQuestion += 1;
+                    pageTitle.Text = "Quiz Game";
+                }
             }
         }
 
