@@ -105,6 +105,9 @@
     <Compile Include="Pages\CMS.xaml.cs">
       <DependentUpon>CMS.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\QuizPage.xaml.cs">
+      <DependentUpon>QuizPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\videoPlayer.xaml.cs">
       <DependentUpon>videoPlayer.xaml</DependentUpon>
     </Compile>
@@ -171,6 +174,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\CMS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\QuizPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -332,6 +339,9 @@
     <Resource Include="DataModel\data.txt" />
     <Resource Include="Images\login.gif" />
     <Resource Include="hcAssets\img1.png" />
+    <Resource Include="Assets\sci19-small.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Content Include="Videos\guide1.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

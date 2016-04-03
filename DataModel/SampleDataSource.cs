@@ -52,13 +52,13 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
             group1.Items.Add(
                     new SampleDataItem(
                         "Group-1-Item-1",
-                        "Buttons",
+                        "Quiz Game",
                         string.Empty,
                         "hcAssets/grid1.png",
-                        "Several types of buttons with custom styles",
+                        "Test your knowledge of the Museum of Healthcare",
                         itemContent,
                         group1,
-                        typeof(ButtonSample)));
+                        typeof(QuizPage)));
             group1.Items.Add(
                     new SampleDataItem(
                         "Group-1-Item-2",

@@ -34,5 +34,101 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.Properties {
                 this["password"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring>test</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection questions {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["questions"]));
+            }
+            set {
+                this["questions"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int questionNum {
+            get {
+                return ((int)(this["questionNum"]));
+            }
+            set {
+                this["questionNum"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring>test</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection AnsA {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["AnsA"]));
+            }
+            set {
+                this["AnsA"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring>test</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection AnsB {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["AnsB"]));
+            }
+            set {
+                this["AnsB"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring>test</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection AnsC {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["AnsC"]));
+            }
+            set {
+                this["AnsC"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring>test</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection AnsD {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["AnsD"]));
+            }
+            set {
+                this["AnsD"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring>test</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection CorrectAns {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["CorrectAns"]));
+            }
+            set {
+                this["CorrectAns"] = value;
+            }
+        }
     }
 }

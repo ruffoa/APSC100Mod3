@@ -14,24 +14,56 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Grid Name="fileChange" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="16*"/>
+                <RowDefinition Height="19*"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="pageTitle" Margin="10,10,-10,214" ><Run Text="Content Management System"/><LineBreak/><Run/></TextBlock>
 
-        <TextBlock x:Name="pageTitle" Grid.Column="1" ><Run Text="Content Management System"/><LineBreak/><Run/></TextBlock>
-
-        <Button x:Name="bOpenFileDialog" Content="Browse"
-                Height="30" Width="191" Margin="453,79,0,0"
+            <Button x:Name="bOpenFileDialog" Content="Browse"
+                Height="30" Width="191" Margin="453,196,0,0"
                 HorizontalAlignment="Left" VerticalAlignment="Top"
-                Click="bOpenFileDialog_Click" Grid.Row="1" />
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="30" Margin="10,79,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Choose a File" VerticalAlignment="Top" Width="438" TextChanged="textBox_TextChanged"/>
-        <Button x:Name="bOpenFileDialog_Copy" Content="Browse"
-        	Height="30" Width="191" Margin="453,187,0,0"
+                Click="bOpenFileDialog_Click" />
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="30" Margin="10,196,0,0" TextWrapping="Wrap" Text="Choose a File" VerticalAlignment="Top" Width="438" TextChanged="textBox_TextChanged"/>
+            <Button x:Name="bOpenFileDialog_Copy" Content="Browse"
+        	Height="30" Width="191" Margin="453,16,0,0"
         	HorizontalAlignment="Left" VerticalAlignment="Top"
         	Click="bOpenFileDialog_Click" Grid.Row="1" />
-        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="30" Margin="10,187,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Choose a File" VerticalAlignment="Top" Width="438" TextChanged="textBox_TextChanged"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="37" Margin="10,37,0,0" Grid.Row="1" TextWrapping="Wrap" Text="File to Change" VerticalAlignment="Top" Width="438" FontSize="16"/>
-        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="37" Margin="10,145,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Change with" VerticalAlignment="Top" Width="438" FontSize="16"/>
-        <Button x:Name="goBack" Content="Back to Home" HorizontalAlignment="Left" Margin="123,493,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Height="30" Background="#FF3DB93D" Click="goBack_Click"/>
+            <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="30" Margin="10,16,0,0" TextWrapping="Wrap" Text="Choose a File" VerticalAlignment="Top" Width="438" TextChanged="textBox_TextChanged" Grid.Row="1"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="37" Margin="10,154,0,0" TextWrapping="Wrap" Text="File to Change" VerticalAlignment="Top" Width="438" FontSize="16"/>
+            <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="37" Margin="10,262,0,0" TextWrapping="Wrap" Text="Change with" VerticalAlignment="Top" Width="438" FontSize="16" Grid.RowSpan="2"/>
+            <Button x:Name="goBack" Content="Back to Home" HorizontalAlignment="Left" Margin="123,205,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Height="30" Background="#FF3DB93D" Click="goBack_Click"/>
+            <Button x:Name="QuestionMode" Content="Edit Quiz Questions" HorizontalAlignment="Left" Margin="379,205,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Height="30" Background="#FF3DB93D" Click="QuestionMode_Click"/>
+        </Grid>
+        <Grid Name="quizChange" Grid.RowSpan="2" Visibility="Collapsed">
+            <Button x:Name="qSave" Content="Save Changes" Height="30" Width="191" Margin="40,529,0,0" 
+        	HorizontalAlignment="Left" VerticalAlignment="Top" Click="ansdChange_Click" />
+            <TextBox x:Name="ansA" HorizontalAlignment="Left" Height="30" Margin="265,258,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="676" TextChanged="textBox_TextChanged"/>
+            <TextBox x:Name="ansB" HorizontalAlignment="Left" Height="30" Margin="265,313,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="676" TextChanged="textBox_TextChanged"/>
+            <TextBox x:Name="ansC" HorizontalAlignment="Left" Height="30" Margin="265,369,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="676" TextChanged="textBox_TextChanged"/>
+            <TextBox x:Name="ansD" HorizontalAlignment="Left" Height="30" Margin="265,423,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="676" TextChanged="textBox_TextChanged"/>
+            <TextBox x:Name="questionText" HorizontalAlignment="Left" Height="133" Margin="265,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="676" TextChanged="textBox_TextChanged"/>
+            <TextBlock x:Name="qInfo" HorizontalAlignment="Left" Margin="40,42,0,0" TextWrapping="Wrap" Text="Editing Question Number" VerticalAlignment="Top" Width="586"/>
+            <Button x:Name="addQuestion" Content="Add New Question" Height="30" Width="191" Margin="265,529,0,0" 
+            	HorizontalAlignment="Left" VerticalAlignment="Top" Click="addQuestion_Click" />
+            <Button x:Name="deleteQuestion" Content="Delete Question" Height="30" Width="191" Margin="499,529,0,0" 
+            	HorizontalAlignment="Left" VerticalAlignment="Top" Click="deleteQuestion_Click" />
+            <ComboBox x:Name="qSelector" HorizontalAlignment="Left" Text="Go to Question" Margin="733,529,0,0" VerticalAlignment="Top" Width="208" Height="30" DropDownOpened="comboBox_DropDownOpened" SelectionChanged="qSelector_SelectionChanged"/>
+            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="93,142,0,0" TextWrapping="Wrap" Text="Question" VerticalAlignment="Top" Height="48" Width="133"/>
+            <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="93,423,0,0" TextWrapping="Wrap" Text="Answer D" VerticalAlignment="Top" Height="30" Width="133"/>
+            <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="93,373,0,0" TextWrapping="Wrap" Text="Answer C" VerticalAlignment="Top" Height="30" Width="133"/>
+            <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="93,262,0,0" TextWrapping="Wrap" Text="Answer A" VerticalAlignment="Top" Height="30" Width="133"/>
 
+            <TextBlock x:Name="textBlock15" HorizontalAlignment="Left" Margin="93,317,0,0" TextWrapping="Wrap" Text="Answer B" VerticalAlignment="Top" Height="30" Width="133"/>
+            <RadioButton x:Name="selA" Content="" Tag="a" HorizontalAlignment="Left" Margin="40,272,0,0" VerticalAlignment="Top" Height="16" Width="21" Checked="selA_Checked"/>
+            <RadioButton x:Name="selB" Content="" Tag="b" HorizontalAlignment="Left" Margin="40,331,0,0" VerticalAlignment="Top" Height="16" Width="21" Checked="selB_Checked"/>
+            <RadioButton x:Name="selC" Content="" Tag="c" HorizontalAlignment="Left" Margin="40,383,0,0" VerticalAlignment="Top" Height="16" Width="21" Checked="selC_Checked"/>
+            <RadioButton x:Name="selD" Content="" Tag="d" HorizontalAlignment="Left" Margin="40,432,0,0" VerticalAlignment="Top" Height="16" Width="21" Checked="selD_Checked"/>
+
+
+        </Grid>
 
     </Grid>
-    
+
 </UserControl>
