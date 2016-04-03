@@ -11,6 +11,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
     using Win32;
     using System.Windows.Navigation;
     using System;
+    using System.IO;
 
     /// <summary>
     /// Interaction logic for CheckBoxRadioButtonSample
@@ -41,16 +42,40 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         private void bOpenFileDialog_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            System.Windows.Forms.OpenFileDialog openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 
             openFileDialog1.Filter = "All Files (*.*)|*.*";
             openFileDialog1.FilterIndex = 1;
 
             openFileDialog1.Multiselect = true;
 
-            bool? userClickedOK = openFileDialog1.ShowDialog();
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                sourceFileName = openFileDialog1.FileName.ToString();
+            }
 
         }
+
+        string tempPath;
+        string sourceFileName;
+
+        private void chooseOpen_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Forms.OpenFileDialog openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+
+            openFileDialog2.Filter = "All Files (*.*)|*.*";
+            openFileDialog2.FilterIndex = 1;
+
+            openFileDialog2.Multiselect = true;
+
+            if (openFileDialog2.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                tempPath = Path.GetDirectoryName(openFileDialog2.FileName);
+                System.IO.File.Copy(sourceFileName, "tempPath", true);
+            }
+
+        }
+
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {

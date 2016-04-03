@@ -67,24 +67,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Mod3-Project.exe" size="10212296">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Mod3-Project.exe" size="10250240">
       <assemblyIdentity name="Mod3-Project" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>iVinhvNjcXVWBR2tAKUgp1c9r6jwRLyzTDVpaapmS/I=</dsig:DigestValue>
+        <dsig:DigestValue>SLNJ0fb03y62hloGfowJH9qp9FJIwCX4bgVSQJvaTAM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Images\Kinect.ico" size="12846">
+  <file name="Images\Kinect.ico" size="31842">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Y9TR1osQ/IWe26QlhJ+QW8ZEJ1YpFImpl+8+6y5gdXg=</dsig:DigestValue>
+      <dsig:DigestValue>toFvsv7QPm70Z6nXDDUVitBTAs7yAU0oQsbEaL4PEYo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Mod3-Project.exe.config" size="964">

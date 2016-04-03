@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\
+C:\Users\Sean Lee\Desktop\Dank 3\APSC100Mod3\obj\Debug\
 Microsoft.Samples.Kinect.ControlsBasics
 none
 false
 DEBUG;TRACE
-D:\School\QueensU Year 1\Mod 3\Final Project\App.xaml
+C:\Users\Sean Lee\Desktop\Dank 3\APSC100Mod3\App.xaml
 18393269803
 81363886288
-28-2109938208
-14-1238715186
+28-489654745
+15903302081
 Common\StandardStyles.xaml;HandPointers\HandPointerStyles.xaml;MainWindow.xaml;Pages\help.xaml;Pages\login.xaml;Pages\CMS.xaml;Pages\videoPlayer.xaml;Pages\ButtonSample.xaml;Pages\playground.xaml;Pages\CheckBoxRadioButtonSample.xaml;Pages\EngagementSettings.xaml;Pages\ItemsControlsSample.xaml;Pages\KinectPointerPointSample.xaml;Pages\InfoPage.xaml;Pages\TestPage.xaml;Pages\ScrollViewerSample.xaml;Pages\SliderSample.xaml;SelectionDisplay.xaml;
 
 False
