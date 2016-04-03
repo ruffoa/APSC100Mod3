@@ -153,4 +153,3 @@ D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Mod3-Project.exe.manifest
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Mod3-Project.application
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Mod3-Project.exe
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Mod3-Project.pdb
-D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\ControlsBasics-WPF.csprojResolveAssemblyReference.cache

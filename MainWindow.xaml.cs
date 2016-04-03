@@ -185,6 +185,8 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
  System.Windows.PresentationSource.FromVisual((System.Windows.Media.Visual)target), 0, key)
                 { RoutedEvent = routedEvent });
 
+               // ControlsBasicsWindow_KeyDown(new object(), new KeyEventArgs());
+
                 //MessageBox.Show("in help!" + myString);
                 detectedUsers = 0;
                 
