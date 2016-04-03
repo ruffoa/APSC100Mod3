@@ -63,7 +63,17 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         private void editBut_Click(object sender, RoutedEventArgs e)
         {
-            System.IO.File.Copy(sourceFileName, tempPath, true);
+            var confirmResult = System.Windows.Forms.MessageBox.Show("Do you want to replace this file",
+                                     "",
+                                     System.Windows.Forms.MessageBoxButtons.YesNo);
+            if (confirmResult == System.Windows.Forms.DialogResult.Yes)
+            {
+                System.IO.File.Copy(sourceFileName, tempPath, true);
+            }
+            else
+            {
+            }
+            
         }
 
         private void chooseOpen_Click(object sender, RoutedEventArgs e)
