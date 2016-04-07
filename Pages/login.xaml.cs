@@ -128,9 +128,12 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                 await Task.Delay(1000);
 
                 MainWindow mainWindow = ControlsBasics.MainWindow.GetMainWindow();
+               // MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
+                //await Task.Delay(1000);
+
                 ControlsBasics.MainWindow.LoginCMS();
-                
+               
             }
             else
             {

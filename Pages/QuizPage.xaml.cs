@@ -20,7 +20,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         /// </summary>
         /// 
 
-        int currentQuestion = 1;
+        int currentQuestion = 0;
         string rightAns = "";
         int score = 0;
 
@@ -28,28 +28,30 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         {
             this.InitializeComponent();
             startButton.Background = System.Windows.Media.Brushes.Green;
+            
         }
 
         private void startGame()
         {
             startButton.Visibility = Visibility.Collapsed;
             gameArea.Visibility = Visibility.Visible;
-
+           
+            quizQuestion();
             
 
-                //for (int i = 0; i < 10; i++)
-                //{
-                //    test.AppendText(Properties.Settings.Default.AnsA[i]);
-                //    test.AppendText(question.Text = Properties.Settings.Default.questions[i]);
-                //    test.AppendText(Properties.Settings.Default.AnsA[i]);
-                //    test.AppendText(Properties.Settings.Default.AnsB[i]);
-                //    test.AppendText(Properties.Settings.Default.AnsC[i]);
-                //    test.AppendText(Properties.Settings.Default.AnsD[i]);
-                //    test.AppendText(Environment.NewLine);
-                //    await Task.Delay(1000);
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    test.AppendText(Properties.Settings.Default.AnsA[i]);
+            //    test.AppendText(question.Text = Properties.Settings.Default.questions[i]);
+            //    test.AppendText(Properties.Settings.Default.AnsA[i]);
+            //    test.AppendText(Properties.Settings.Default.AnsB[i]);
+            //    test.AppendText(Properties.Settings.Default.AnsC[i]);
+            //    test.AppendText(Properties.Settings.Default.AnsD[i]);
+            //    test.AppendText(Environment.NewLine);
+            //    await Task.Delay(1000);
 
-                //}
-            
+            //}
+
             // Properties.Settings.Default.Save();
 
         }
@@ -57,8 +59,9 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         private async void quizQuestion()
         {
             int qnum = Properties.Settings.Default.questions.Count;
-            questionNum.Text = "Question Number " + qnum + " of " + Properties.Settings.Default.questionNum;
-            if (qnum > 1 && currentQuestion <= qnum)
+            int num = Properties.Settings.Default.questionNum;
+            questionNum.Text = "Question Number " + (currentQuestion +1) + " of " + (Properties.Settings.Default.questionNum + 1);
+            if (num > 1 && currentQuestion <= num)
             {
                 question.Text = Properties.Settings.Default.questions[currentQuestion];
                 ansA.Content = Properties.Settings.Default.AnsA[currentQuestion];
@@ -66,6 +69,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                 ansC.Content = Properties.Settings.Default.AnsC[currentQuestion];
                 ansD.Content = Properties.Settings.Default.AnsD[currentQuestion];
                 rightAns = Properties.Settings.Default.CorrectAns[currentQuestion];
+                test.Text = Properties.Settings.Default.questions[currentQuestion];
                 await Task.Delay(100);
             }
             else
@@ -83,7 +87,9 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         private async void ansD_Click(object sender, RoutedEventArgs e)
         {
             int qnum = Properties.Settings.Default.questions.Count;
-            if (qnum > 1 && currentQuestion <= qnum)
+            int num = Properties.Settings.Default.questionNum;
+
+            if (num > 1 && currentQuestion <= num)
             {
                 rightAns = Properties.Settings.Default.CorrectAns[currentQuestion];
                 if (rightAns == "d")
@@ -93,6 +99,8 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                     await Task.Delay(1000);
                     correct.Visibility = Visibility.Collapsed;
                     currentQuestion += 1;
+                    score += 1;
+                    quizQuestion();
                 }
                 else
                 {
@@ -103,6 +111,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                     correct.Visibility = Visibility.Collapsed;
                     currentQuestion += 1;
                     pageTitle.Text = "Quiz Game";
+                    quizQuestion();
                 }
             }
         }
@@ -110,13 +119,15 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         private async void ansA_Click(object sender, RoutedEventArgs e)
         {
             rightAns = Properties.Settings.Default.CorrectAns[currentQuestion];
-            if (rightAns == "d")
+            if (rightAns == "a")
             {
                 correct.Source = new BitmapImage(new Uri(@"/Images/check.png", UriKind.Relative));
                 correct.Visibility = Visibility.Visible;
                 await Task.Delay(1000);
                 correct.Visibility = Visibility.Collapsed;
                 currentQuestion += 1;
+                score += 1;
+                quizQuestion();
             }
             else
             {
@@ -127,6 +138,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                 correct.Visibility = Visibility.Collapsed;
                 currentQuestion += 1;
                 pageTitle.Text = "Quiz Game";
+                quizQuestion();
             }
         }
 
@@ -134,13 +146,15 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         {
 
             rightAns = Properties.Settings.Default.CorrectAns[currentQuestion];
-            if (rightAns == "d")
+            if (rightAns == "b")
             {
                 correct.Source = new BitmapImage(new Uri(@"/Images/check.png", UriKind.Relative));
                 correct.Visibility = Visibility.Visible;
                 await Task.Delay(1000);
                 correct.Visibility = Visibility.Collapsed;
                 currentQuestion += 1;
+                score += 1;
+                quizQuestion();
             }
             else
             {
@@ -151,6 +165,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                 correct.Visibility = Visibility.Collapsed;
                 currentQuestion += 1;
                 pageTitle.Text = "Quiz Game";
+                quizQuestion();
             }
         }
 
@@ -158,13 +173,15 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         {
 
             rightAns = Properties.Settings.Default.CorrectAns[currentQuestion];
-            if (rightAns == "d")
+            if (rightAns == "c")
             {
                 correct.Source = new BitmapImage(new Uri(@"/Images/check.png", UriKind.Relative));
                 correct.Visibility = Visibility.Visible;
                 await Task.Delay(1000);
                 correct.Visibility = Visibility.Collapsed;
                 currentQuestion += 1;
+                score += 1;
+                quizQuestion();
             }
             else
             {
@@ -175,6 +192,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                 correct.Visibility = Visibility.Collapsed;
                 currentQuestion += 1;
                 pageTitle.Text = "Quiz Game";
+                quizQuestion();
             }
         }
     }

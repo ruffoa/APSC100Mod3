@@ -12,10 +12,9 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
     using System.Windows.Navigation;
     using System;
     using System.Collections.Generic;
-    using System.IO;
-    /// <summary>
-    /// Interaction logic for CheckBoxRadioButtonSample
-    /// </summary>
+    using System.Threading.Tasks;    /// <summary>
+                                     /// Interaction logic for CheckBoxRadioButtonSample
+                                     /// </summary>
     public partial class CMS : UserControl
     {
         /// <summary>
@@ -34,12 +33,14 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         //  }
         int questionNumber = 0;
         string selAns = "";
+        bool inEdit = false;
 
         public CMS()
         {
             this.InitializeComponent();
             qInfo.Text = "Editing Question Number " + (questionNumber + 1) + " of " + Properties.Settings.Default.questionNum;
         }
+
 
         string tempPath;
         string sourceFileName;
@@ -60,7 +61,6 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             }
 
         }
-
         private void editBut_Click(object sender, RoutedEventArgs e)
         {
             var confirmResult = System.Windows.Forms.MessageBox.Show("Do you want to replace this file",
@@ -73,7 +73,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             else
             {
             }
-            
+
         }
 
         private void chooseOpen_Click(object sender, RoutedEventArgs e)
@@ -99,27 +99,34 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         }
 
-       
+
         private void goBack_Click(object sender, RoutedEventArgs e)
         {
             //   NavigationService nav = NavigationService.GetNavigationService(this);
             // nav.Navigate(new Uri("xamlFeedbackPage.xaml", UriKind.RelativeOrAbsolute));
 
+            if (inEdit == true)
+            {
+                Properties.Settings.Default.questionNum -= 1;
+                Properties.Settings.Default.Save();
+            }
+
             // MainWindow mainWindow = ControlsBasics.MainWindow.GetMainWindow();
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
-            
+
+           // await Task.Delay(1000);
+
             if (MainWindow.winCount() == 3)
             {
                 MainWindow nmain = new MainWindow();
                 nmain.Show();
                 ControlsBasics.MainWindow.CloseWindow();
-
+                //await Task.Delay(1000);
             }
 
-
             ControlsBasics.MainWindow.CloseWindow();
-           
+
         }
 
         private void Close()
@@ -135,7 +142,11 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                 //MessageBox.Show("key detected");
 
                 // MainWindow mainWindow = ControlsBasics.MainWindow.GetMainWindow();
-
+                if (inEdit == true)
+                {
+                    Properties.Settings.Default.questionNum -= 1;
+                    Properties.Settings.Default.Save();
+                }
                 //MainWindow.winCount();
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
@@ -193,7 +204,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             Properties.Settings.Default.AnsD.Add(ansD.Text);
             Properties.Settings.Default.CorrectAns.Add(selAns);
             Properties.Settings.Default.Save();
-
+            inEdit = false;
         }
 
         private void addQuestion_Click(object sender, RoutedEventArgs e)
@@ -201,7 +212,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             questionNumber += 1;
             Properties.Settings.Default.questionNum += 1;
             Properties.Settings.Default.Save();
-            qInfo.Text = "Editing Question Number " + (questionNumber + 1) + " of " + Properties.Settings.Default.questionNum;
+            qInfo.Text = "Editing Question Number " + (questionNumber) + " of " + Properties.Settings.Default.questionNum;
             ansA.Text = "";
             ansB.Text = "";
             ansC.Text = "";
@@ -213,7 +224,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             ansC.IsEnabled = true;
             ansD.IsEnabled = true;
             questionText.IsEnabled = true;
-
+            inEdit = true;
         }
 
         private void deleteQuestion_Click(object sender, RoutedEventArgs e)
@@ -225,6 +236,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                 Properties.Settings.Default.AnsB.RemoveAt(questionNumber);
                 Properties.Settings.Default.AnsC.RemoveAt(questionNumber);
                 Properties.Settings.Default.AnsD.RemoveAt(questionNumber);
+                Properties.Settings.Default.CorrectAns.RemoveAt(questionNumber);
                 questionNumber -= 1;
                 Properties.Settings.Default.questionNum -= 1;
                 Properties.Settings.Default.Save();
@@ -263,21 +275,37 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
             if (Properties.Settings.Default.questionNum > 0)
             {
-                for (int i = 0; i < Properties.Settings.Default.questionNum; i++)
+                for (int i = 0; i <= Properties.Settings.Default.questionNum; i++)
                 qSelector.Items.Add("Question" + i);
             }
         }
 
         private void qSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            questionNumber = qSelector.SelectedIndex + 1;
+            questionNumber = qSelector.SelectedIndex;
+            if (questionNumber <0)
+            {
+                questionNumber = 0;
+            }
             qInfo.Text = "Editing Question Number " + questionNumber + " of " + Properties.Settings.Default.questionNum;
-             
+
             ansA.Text = Properties.Settings.Default.AnsA[questionNumber];
             ansB.Text = Properties.Settings.Default.AnsB[questionNumber];
             ansC.Text = Properties.Settings.Default.AnsC[questionNumber];
             ansD.Text = Properties.Settings.Default.AnsD[questionNumber];
             questionText.Text = Properties.Settings.Default.questions[questionNumber];
+            selAns = Properties.Settings.Default.CorrectAns[questionNumber];
+            if (selAns == "a")
+            {
+                selA.IsChecked = true;
+            }
+            else if (selAns == "b")
+             selB.IsChecked = true;
+            else if (selAns == "c")
+                selC.IsChecked = true;
+            else if (selAns == "d")
+                selD.IsChecked = true;
+
             qSave.IsEnabled = false;
             ansA.IsEnabled = false;
             ansB.IsEnabled = false;
@@ -314,6 +342,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             infoChange.Visibility = Visibility.Collapsed;
         }
 
+<<<<<<< HEAD
         private void textBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
@@ -364,6 +393,17 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             fileChange.Visibility = Visibility.Collapsed;
             quizChange.Visibility = Visibility.Collapsed;
             infoChange.Visibility = Visibility.Visible;
+=======
+        private void clearAll_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.questions.Clear();
+            Properties.Settings.Default.AnsA.Clear();
+            Properties.Settings.Default.AnsB.Clear();
+            Properties.Settings.Default.AnsC.Clear();
+            Properties.Settings.Default.AnsD.Clear();
+            Properties.Settings.Default.CorrectAns.Clear();
+            Properties.Settings.Default.questionNum = 0;
+>>>>>>> 129e0fbe515612db7ddcf3614f9d760e551690e7
         }
     }
  

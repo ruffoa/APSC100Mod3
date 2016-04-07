@@ -250,6 +250,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         {
             if (e.Key == System.Windows.Input.Key.Home)
             {
+                inHelp = true;
                 if (user == true)
                 {
                     CMS mynewPage = new CMS(); //newPage is the name of the newPage.xaml file
@@ -356,7 +357,9 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         public static void LoginCMS()
         {
+            //await Task.Delay(100);
             CloseAllButMain();
+            //App.Current.Windows[0].Close();
 
             aTimer.Elapsed += new System.Timers.ElapsedEventHandler(OnTimedEvent);
             aTimer.Interval = 300000;

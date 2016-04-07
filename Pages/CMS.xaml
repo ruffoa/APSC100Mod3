@@ -84,7 +84,8 @@
             <RadioButton x:Name="selC" Content="" Tag="c" HorizontalAlignment="Left" Margin="40,383,0,0" VerticalAlignment="Top" Height="16" Width="21" Checked="selC_Checked"/>
             <RadioButton x:Name="selD" Content="" Tag="d" HorizontalAlignment="Left" Margin="40,432,0,0" VerticalAlignment="Top" Height="16" Width="21" Checked="selD_Checked"/>
             <Button x:Name="goBack1" Content="Back to Home" HorizontalAlignment="Left" Margin="258,568,0,0" VerticalAlignment="Top" Width="198" Height="30" Background="#FF3DB93D" Click="goBack_Click"/>
-            <Button x:Name="fileMode" Content="Edit Files" HorizontalAlignment="Left" Margin="499,568,0,0" VerticalAlignment="Top" Width="198" Height="30" Background="#FF3DB93D" Click="fileMode_Click"/>
+            <Button x:Name="fileMode" Content="Edit Files" HorizontalAlignment="Left" Margin="430,568,0,0" VerticalAlignment="Top" Width="198" Height="30" Background="#FF3DB93D" Click="fileMode_Click"/>
+            <Button x:Name="clearAll" Content="Clear All Questions" HorizontalAlignment="Left" Margin="600,568,0,0" VerticalAlignment="Top" Width="198" Height="30" Background="#FF3DB93D" Click="clearAll_Click"/>
 
 
         </Grid>
