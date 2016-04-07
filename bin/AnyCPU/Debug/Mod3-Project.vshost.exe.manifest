@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Mod3-Project.exe" size="10387456">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Mod3-Project.exe" size="10391552">
       <assemblyIdentity name="Mod3-Project" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5aw7V1AxTri6K/n6SRu+FdmBfkz51RASDsUA/rgzVM0=</dsig:DigestValue>
+        <dsig:DigestValue>GU15KCR10vuNE4h8ww+0tjjTDtQ0hizuISHCWJJkoOs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -87,13 +87,13 @@
       <dsig:DigestValue>Y9TR1osQ/IWe26QlhJ+QW8ZEJ1YpFImpl+8+6y5gdXg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Mod3-Project.exe.config" size="3340">
+  <file name="Mod3-Project.exe.config" size="4048">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>xoX3yYEjQRQGVkkbhN3m9GVz1NO2TXQ3T3lNnw5B6F0=</dsig:DigestValue>
+      <dsig:DigestValue>Wc8faRu58YblR1CLeN/XMn2EtByQcm4p4zuQIM5/6pc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Videos\guide1.mp4" size="888664">

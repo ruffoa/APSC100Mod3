@@ -130,5 +130,55 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.Properties {
                 this["CorrectAns"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Formed in 1897, the Engineering Society of Queen’s University is one of the oldes" +
+            "t representative bodies for engineering students in Canada and continues to be a" +
+            " leader in student initiatives.")]
+        public string info1 {
+            get {
+                return ((string)(this["info1"]));
+            }
+            set {
+                this["info1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("DNA is a vital part of the human species")]
+        public string info2 {
+            get {
+                return ((string)(this["info2"]));
+            }
+            set {
+                this["info2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("testtext3")]
+        public string info3 {
+            get {
+                return ((string)(this["info3"]));
+            }
+            set {
+                this["info3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("testtext4")]
+        public string info4 {
+            get {
+                return ((string)(this["info4"]));
+            }
+            set {
+                this["info4"] = value;
+            }
+        }
     }
 }

@@ -23,17 +23,17 @@
                      HorizontalScrollBarVisibility="Auto" k:KinectRegion.IsHorizontalRailEnabled="true" k:KinectRegion.IsVerticalRailEnabled="False"
                       k:KinectRegion.ZoomMode="Enabled">
             <Grid Width="1390">
-                <Image x:Name="image1" HorizontalAlignment="Left" Height="150" Margin="10,10,0,0" VerticalAlignment="Top" Width="191" Source="/hcAssets/img1.png"/>
+                <Image x:Name="image1" HorizontalAlignment="Left" Height="150" Margin="10,10,0,0" VerticalAlignment="Top" Width="191" Source="/Mod3-Project;component/hcAssets/img1.png"/>
                 <TextBlock x:Name="text1" HorizontalAlignment="Left" Height="309" Margin="10,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" FontSize="21.333"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
-                <Image x:Name="image" HorizontalAlignment="Left" Height="150" Margin="237,10,0,0" VerticalAlignment="Top" Width="209" Source="/Assets/EngSoc.png"/>
+                <Image x:Name="image" HorizontalAlignment="Left" Height="150" Margin="237,10,0,0" VerticalAlignment="Top" Width="209" Source="/Mod3-Project;component/Assets/EngSoc.png"/>
                 <TextBlock x:Name="text2" HorizontalAlignment="Left" Height="309" Margin="237,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" FontSize="21.333"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
-                <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="150" Margin="464,10,0,0" VerticalAlignment="Top" Width="209" Source="Images/fireworks.jpg"/>
+                <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="150" Margin="464,10,0,0" VerticalAlignment="Top" Width="209" Source="/Mod3-Project;component/Images/fireworks.jpg"/>
                 <TextBlock x:Name="text3" HorizontalAlignment="Left" Height="309" Margin="464,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" FontSize="21.333"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
-                <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="150" Margin="695,10,0,0" VerticalAlignment="Top" Width="209" Source="Assets/sci19-1080.png"/>
+                <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="150" Margin="695,10,0,0" VerticalAlignment="Top" Width="209" Source="/Mod3-Project;component/Assets/sci19-1080.png"/>
                 <TextBlock x:Name="text4" HorizontalAlignment="Left" Height="309" Margin="695,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" FontSize="21.333"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
-                <Image x:Name="image_Copy2" HorizontalAlignment="Left" Height="150" Margin="928,10,0,0" VerticalAlignment="Top" Width="209" Source="Images/sydney.jpg"/>
+                <Image x:Name="image_Copy2" HorizontalAlignment="Left" Height="150" Margin="928,10,0,0" VerticalAlignment="Top" Width="209" Source="/Mod3-Project;component/Images/sydney.jpg"/>
                 <TextBlock x:Name="text5" HorizontalAlignment="Left" Height="309" Margin="928,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" FontSize="21.333"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
-                <Image x:Name="image_Copy3" HorizontalAlignment="Left" Height="150" Margin="1163,10,0,0" VerticalAlignment="Top" Width="209" Source="Images/space-back.jpg"/>
+                <Image x:Name="image_Copy3" HorizontalAlignment="Left" Height="150" Margin="1163,10,0,0" VerticalAlignment="Top" Width="209" Source="/Mod3-Project;component/Images/space-back.jpg"/>
                 <TextBlock x:Name="text6" HorizontalAlignment="Left" Height="309" Margin="1163,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"><Run Text="Supporting"/><Run Text=" Text Goes Here"/></TextBlock>
             </Grid>
         </ScrollViewer>
