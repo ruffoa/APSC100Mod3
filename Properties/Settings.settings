@@ -44,5 +44,17 @@
   &lt;string&gt;test&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
+    <Setting Name="info1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Formed in 1897, the Engineering Society of Queen’s University is one of the oldest representative bodies for engineering students in Canada and continues to be a leader in student initiatives.</Value>
+    </Setting>
+    <Setting Name="info2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DNA is a vital part of the human species</Value>
+    </Setting>
+    <Setting Name="info3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">testtext3</Value>
+    </Setting>
+    <Setting Name="info4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">testtext4</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

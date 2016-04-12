@@ -24,10 +24,10 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         public void textUpdate()
         {
-            text2.Text = "Formed in 1897, the Engineering Society of Queen’s University is one of the oldest representative bodies for engineering students in Canada and continues to be a leader in student initiatives.";
-            text1.Text = "DNA is a vital part of the human species";
-            text3.Text = "Lorem Ipsum.....";
-            text4.Text = "this is more generic text";
+            text1.Text = Properties.Settings.Default.info1;
+            text2.Text = Properties.Settings.Default.info2;
+            text3.Text = Properties.Settings.Default.info3;
+            text4.Text = Properties.Settings.Default.info4;
         }
     }
 }

@@ -261,6 +261,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         {
             fileChange.Visibility = Visibility.Collapsed;
             quizChange.Visibility = Visibility.Visible;
+            infoChange.Visibility = Visibility.Collapsed;
             qInfo.Text = "Editing Question Number " + questionNumber + " of " + Properties.Settings.Default.questionNum;
         }
 
@@ -338,8 +339,61 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         {
             fileChange.Visibility = Visibility.Visible;
             quizChange.Visibility = Visibility.Collapsed;
+            infoChange.Visibility = Visibility.Collapsed;
         }
 
+<<<<<<< HEAD
+        private void textBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.info1 = textBox.Text;
+        }
+
+        private void infoChange_Loaded(object sender, RoutedEventArgs e)
+        {
+            textBox.Text = Properties.Settings.Default.info1;
+            textBox2.Text = Properties.Settings.Default.info2;
+            textBox3.Text = Properties.Settings.Default.info3;
+            textBox4.Text = Properties.Settings.Default.info4;  
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.info2 = textBox.Text;
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.info3 = textBox.Text;
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.info4 = textBox.Text;
+        }
+
+        private void button5_Click(object sender, RoutedEventArgs e)
+        {
+            fileChange.Visibility = Visibility.Visible;
+            quizChange.Visibility = Visibility.Collapsed;
+            infoChange.Visibility = Visibility.Collapsed;
+        }
+
+        private void goBack_Click2(object sender, RoutedEventArgs e)
+        {
+            fileChange.Visibility = Visibility.Collapsed;
+            quizChange.Visibility = Visibility.Collapsed;
+            infoChange.Visibility = Visibility.Visible;
+=======
         private void clearAll_Click(object sender, RoutedEventArgs e)
         {
             Properties.Settings.Default.questions.Clear();
@@ -349,6 +403,8 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             Properties.Settings.Default.AnsD.Clear();
             Properties.Settings.Default.CorrectAns.Clear();
             Properties.Settings.Default.questionNum = 0;
+>>>>>>> 129e0fbe515612db7ddcf3614f9d760e551690e7
         }
     }
+ 
 }
