@@ -35,7 +35,13 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         {
             startButton.Visibility = Visibility.Collapsed;
             gameArea.Visibility = Visibility.Visible;
-           
+            //if (Properties.Settings.Default.questionNum != Properties.Settings.Default.questions.Count)
+            //{
+            //    Properties.Settings.Default.questionNum = Properties.Settings.Default.questions.Count;
+            //    Properties.Settings.Default.Save();
+           // Properties.Settings.Default.questionNum -= 1;
+           //Properties.Settings.Default.Save();
+            //}
             quizQuestion();
             
 
@@ -76,6 +82,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             {
                 questionNum.Text = "All Questions Answered!";
                 question.Text = "You got " + score + " right out of " + qnum;
+                currentQuestion = 0;
             }
         }
 

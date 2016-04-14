@@ -89,6 +89,7 @@ D:\School\QueensU Year 1\Mod 3\Kinect Projects\Alpha-App\ControlsBasics-WPF\obj\
 C:\Users\Chris\Documents\mod3\bin\AnyCPU\Debug\ControlsBasics-WPF.exe.config
 C:\Users\Chris\Documents\mod3\obj\Debug\ControlsBasics-WPF.exe
 C:\Users\Chris\Documents\mod3\obj\Debug\ControlsBasics-WPF.pdb
+D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Videos\video2.mp4
 D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Videos\guide1.mp4
 D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Videos\guide2.mp4
 D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Videos\guide3a.mp4
@@ -96,6 +97,7 @@ D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Videos\guide3b.mp4
 D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Videos\guide4.mp4
 D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Videos\guide5.mp4
 D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Videos\kinect-swipe.mp4
+D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Videos\video1.mp4
 D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Mod3-Project.exe.config
 D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Mod3-Project.exe.manifest
 D:\School\QueensU Year 1\Mod 3\Final Project\bin\AnyCPU\Debug\Mod3-Project.application
@@ -109,6 +111,7 @@ D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Common\StandardStyles.bam
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\HandPointers\HandPointerStyles.baml
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\login.baml
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\CMS.baml
+D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\videoPlayer2.baml
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\videoPlayer.baml
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\ButtonSample.baml
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\playground.baml
@@ -126,6 +129,7 @@ D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\help.g.cs
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\login.g.cs
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\CMS.g.cs
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\QuizPage.g.cs
+D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\videoPlayer2.g.cs
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\videoPlayer.g.cs
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\ButtonSample.g.cs
 D:\School\QueensU Year 1\Mod 3\Final Project\obj\Debug\Pages\playground.g.cs

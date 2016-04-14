@@ -12,9 +12,10 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
     using System.Windows.Navigation;
     using System;
     using System.Collections.Generic;
-    using System.Threading.Tasks;    /// <summary>
-                                     /// Interaction logic for CheckBoxRadioButtonSample
-                                     /// </summary>
+    using System.Threading.Tasks;
+    using System.Windows.Media.Imaging;/// <summary>
+                                       /// Interaction logic for CheckBoxRadioButtonSample
+                                       /// </summary>
     public partial class CMS : UserControl
     {
         /// <summary>
@@ -34,6 +35,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         int questionNumber = 0;
         string selAns = "";
         bool inEdit = false;
+        int infoNum = 0;
 
         public CMS()
         {
@@ -115,7 +117,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
 
-           // await Task.Delay(1000);
+            // await Task.Delay(1000);
 
             if (MainWindow.winCount() == 3)
             {
@@ -131,8 +133,8 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
         private void Close()
         {
-            
-           
+
+
         }
 
         private void UserControl_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
@@ -255,7 +257,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             }
         }
 
-        
+
 
         private void QuestionMode_Click(object sender, RoutedEventArgs e)
         {
@@ -276,14 +278,14 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             if (Properties.Settings.Default.questionNum > 0)
             {
                 for (int i = 0; i <= Properties.Settings.Default.questionNum; i++)
-                qSelector.Items.Add("Question" + i);
+                    qSelector.Items.Add("Question" + i);
             }
         }
 
         private void qSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             questionNumber = qSelector.SelectedIndex;
-            if (questionNumber <0)
+            if (questionNumber < 0)
             {
                 questionNumber = 0;
             }
@@ -300,7 +302,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                 selA.IsChecked = true;
             }
             else if (selAns == "b")
-             selB.IsChecked = true;
+                selB.IsChecked = true;
             else if (selAns == "c")
                 selC.IsChecked = true;
             else if (selAns == "d")
@@ -342,7 +344,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             infoChange.Visibility = Visibility.Collapsed;
         }
 
-<<<<<<< HEAD
+
         private void textBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
@@ -362,8 +364,8 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         {
             textBox.Text = Properties.Settings.Default.info1;
             textBox2.Text = Properties.Settings.Default.info2;
-            textBox3.Text = Properties.Settings.Default.info3;
-            textBox4.Text = Properties.Settings.Default.info4;  
+            //textBox3.Text = Properties.Settings.Default.info3;
+            //textBox4.Text = Properties.Settings.Default.info4;  
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
@@ -393,7 +395,9 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             fileChange.Visibility = Visibility.Collapsed;
             quizChange.Visibility = Visibility.Collapsed;
             infoChange.Visibility = Visibility.Visible;
-=======
+        }
+
+
         private void clearAll_Click(object sender, RoutedEventArgs e)
         {
             Properties.Settings.Default.questions.Clear();
@@ -403,8 +407,92 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             Properties.Settings.Default.AnsD.Clear();
             Properties.Settings.Default.CorrectAns.Clear();
             Properties.Settings.Default.questionNum = 0;
->>>>>>> 129e0fbe515612db7ddcf3614f9d760e551690e7
+
+        }
+
+        private void textSelector_DropDownOpened(object sender, EventArgs e)
+        {
+            textSelector.Items.Clear();
+
+            if (inEdit == true)
+            {
+                Properties.Settings.Default.questionNum -= 1;
+                Properties.Settings.Default.Save();
+                inEdit = false;
+            }
+
+            if (Properties.Settings.Default.infoArray.Count > 0)
+            {
+                infoBox.Text = Properties.Settings.Default.infoArray.Count + " Entries Found";
+                for (int i = 0; i < Properties.Settings.Default.infoArray.Count; i++)
+                    if (i == 6)
+                    {
+                        textSelector.Items.Add("Page Title");
+                    }
+                    else
+                    {
+                        string description = "";
+                        if (Properties.Settings.Default.infoArray[i].Length < 15 && Properties.Settings.Default.infoArray[i].Length > 0)
+                        {
+                            description = !String.IsNullOrWhiteSpace(Properties.Settings.Default.infoArray[i]) 
+    ? Properties.Settings.Default.infoArray[i].Substring(0, Properties.Settings.Default.infoArray[i].Length) : Properties.Settings.Default.infoArray[i];
+                        }
+                        else {
+                            description = !String.IsNullOrWhiteSpace(Properties.Settings.Default.infoArray[i]) && Properties.Settings.Default.infoArray[i].Length >= 15
+        ? Properties.Settings.Default.infoArray[i].Substring(0, 15) : Properties.Settings.Default.infoArray[i];
+                        }
+                        
+                        textSelector.Items.Add("Field" + i + ": " + description); // + " : " + StringExtensions.TruncateLongString(Properties.Settings.Default.infoArray[i], 15));
+                    }
+             }
+        }
+
+       
+
+        private void textSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            infoNum = textSelector.SelectedIndex;
+            if (infoNum < 0)
+            {
+                infoNum = 0;
+            }
+
+            infoBox.Text = Properties.Settings.Default.infoArray[infoNum];
+
+        }
+
+        private async void saveInfo_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.infoArray[infoNum] = infoBox.Text;
+            Properties.Settings.Default.Save();
+
+           // saveInfo.Background = System.Windows.Media.Brushes.Green;
+            //check.Source = new BitmapImage(new Uri(@"/Images/check.png", UriKind.Relative));
+            check.Visibility = Visibility.Visible;
+            await Task.Delay(500);
+            check.Visibility = Visibility.Collapsed;
+
+        }
+
+        private void addInfo_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.infoArray.Clear();
+            Properties.Settings.Default.infoArray.Add(Properties.Settings.Default.info1);
+            Properties.Settings.Default.infoArray.Add(Properties.Settings.Default.info2);
+            Properties.Settings.Default.infoArray.Add(Properties.Settings.Default.info3);
+            Properties.Settings.Default.infoArray.Add(Properties.Settings.Default.info4);
+            Properties.Settings.Default.infoArray.Add("test");
+            Properties.Settings.Default.infoArray.Add("dynamic editing");
+            Properties.Settings.Default.infoArray.Add("Museum Info Test Page");
+            Properties.Settings.Default.Save();
         }
     }
- 
+    public static class StringExtensions
+    {
+        public static string TruncateLongString(this string str, int maxLength)
+        {
+            return str.Substring(0, Math.Min(str.Length, maxLength));
+        }
+    }
+
 }

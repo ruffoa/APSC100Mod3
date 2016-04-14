@@ -36,7 +36,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             // btnMoveForward.IsEnabled = flag;
         }
 
-
+      
         //  private void btnStop_Click(object sender, RoutedEventArgs e)
         //  {
         //      MediaPlayer.Pause();
@@ -55,7 +55,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         //      MediaPlayer.Position += TimeSpan.FromSeconds(10);
         //  }
 
-       
+
         private void playbutton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             IsPlaying(true);
@@ -65,10 +65,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
                 playbutton.Content = "Pause";
                 //if (mediaplayer.MediaFailed() += 1)
 
-                {
-                        MessageBox.Show("fail to load!");
-                    
-                }
+               
             }
             else
             {
@@ -80,6 +77,12 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         private void btnOpen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
 
+        }
+
+        private void restart_Click(object sender, RoutedEventArgs e)
+        {
+            mediaplayer.Position = TimeSpan.Zero;
+            mediaplayer.Play();
         }
     }
 }

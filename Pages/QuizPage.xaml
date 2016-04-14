@@ -24,10 +24,10 @@
                 <ColumnDefinition Width="0.5*" />
                 <ColumnDefinition Width="0.5*" />
             </Grid.ColumnDefinitions>
-            <Button x:Name="ansA" Content="Button" HorizontalAlignment="Left" Margin="45,164,0,0" VerticalAlignment="Top" Width="206" Height="100" Click="ansA_Click" Grid.ColumnSpan="2"/>
-            <Button x:Name="ansB" Content="Button" HorizontalAlignment="Left" Margin="198,164,-254,0" VerticalAlignment="Top" Width="206" Height="100" Click="ansB_Click" Grid.Column="1"/>
-            <Button x:Name="ansC" Content="Button" HorizontalAlignment="Left" Margin="45,381,0,-162" VerticalAlignment="Top" Width="206" Height="101" Click="ansC_Click" Grid.ColumnSpan="2"/>
-            <Button x:Name="ansD" Content="Button" HorizontalAlignment="Left" Margin="198,381,-254,-162" VerticalAlignment="Top" Width="206" Height="101" Click="ansD_Click" Grid.Column="1"/>
+            <Button x:Name="ansA" Content="Button" HorizontalAlignment="Left" Margin="45,164,0,0" VerticalAlignment="Top" Width="406" Height="100" Click="ansA_Click" Grid.ColumnSpan="2"/>
+            <Button x:Name="ansB" Content="Button" HorizontalAlignment="Left" Margin="198,164,-254,0" VerticalAlignment="Top" Width="406" Height="100" Click="ansB_Click" Grid.Column="1"/>
+            <Button x:Name="ansC" Content="Button" HorizontalAlignment="Left" Margin="45,381,0,-162" VerticalAlignment="Top" Width="406" Height="101" Click="ansC_Click" Grid.ColumnSpan="2"/>
+            <Button x:Name="ansD" Content="Button" HorizontalAlignment="Left" Margin="198,381,-254,-162" VerticalAlignment="Top" Width="406" Height="101" Click="ansD_Click" Grid.Column="1"/>
             <TextBlock x:Name="questionNum" HorizontalAlignment="Left" Margin="10,64,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="280" FontSize="18.667" Grid.ColumnSpan="2"/>
             <TextBlock x:Name="question" HorizontalAlignment="Left" Margin="10,94,-122,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="412" Height="70" FontSize="16" Grid.ColumnSpan="2"/>
             <Image x:Name="correct" HorizontalAlignment="Left" Height="100" Margin="26,33,0,0" VerticalAlignment="Top" Width="100" Source="/Images/check.png" Grid.Column="1" Visibility="Collapsed"/>

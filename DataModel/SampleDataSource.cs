@@ -103,7 +103,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
                     new SampleDataItem(
                         "Group-1-Item-8",
                         "Testing the Kinect",
-                        "By: Alex Ruffo",
+                        "APSC 490A",
                         "hcAssets/grid6.png",
                         
                         "Testing :)",
@@ -123,8 +123,8 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
             group1.Items.Add(
                     new SampleDataItem(
                         "Group-1-Item-8",
-                        "Example Video Page",
-                        "With basic Options (coming soon) - A.R.",
+                        "Example Video Page 1",
+                        "With basic Options - A.R.",
                        "hcAssets/grid8.png",
                         "Sample Museum Video Player",
                         itemContent,
@@ -133,12 +133,13 @@ namespace Microsoft.Samples.Kinect.ControlsBasics.DataModel
             group1.Items.Add(
                     new SampleDataItem(
                         "Group-1-Item-2",
-                        "Item Title: 2",
+                        "Video Player 2",
                         "Item Subtitle: 2",
                         "hcAssets/grid9.png",
-                        "Item Description: Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
+                        "Sample video player number 2",
                         itemContent,
-                        group1));
+                        group1,
+                        typeof(videoplayer2)));
             group1.Items.Add(
                     new SampleDataItem(
                         "Group-1-Item-3",
