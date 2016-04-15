@@ -13,9 +13,11 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using System.Windows.Media.Imaging;/// <summary>
-                                       /// Interaction logic for CheckBoxRadioButtonSample
-                                       /// </summary>
+    using System.Windows.Media.Imaging;
+    using System.Text.RegularExpressions;
+    using System.Diagnostics;/// <summary>
+                             /// Interaction logic for CheckBoxRadioButtonSample
+                             /// </summary>
     public partial class CMS : UserControl
     {
         /// <summary>
@@ -36,16 +38,32 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         string selAns = "";
         bool inEdit = false;
         int infoNum = 0;
+        string path1;
 
         public CMS()
         {
             this.InitializeComponent();
+             
             qInfo.Text = "Editing Question Number " + (questionNumber + 1) + " of " + Properties.Settings.Default.questionNum;
+            directory.Text = GetPath("hcAssets"); // returns the full path to the images directory
+            path1 = GetPath("hcAssets");
         }
 
 
         string tempPath = "";
         string sourceFileName = "";
+
+
+        private string GetPath(string relativePath)
+        {
+            var appPath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string pattern = @"^(.+\\)(.+exe)$";
+            Regex regex = new Regex(pattern, RegexOptions.None);
+            var match = regex.Match(appPath);
+            return System.IO.Path.GetFullPath(match.Groups[1].Value + relativePath);
+            
+        }
+
 
         private void bOpenFileDialog_Click(object sender, RoutedEventArgs e)
         {
@@ -486,6 +504,16 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
             Properties.Settings.Default.infoArray.Add("dynamic editing");
             Properties.Settings.Default.infoArray.Add("Museum Info Test Page");
             Properties.Settings.Default.Save();
+        }
+
+        private void openDirectory_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start(@path1);
+            //await Task.Delay(100);
+            //MessageBox.Show("Note: this will close the program to prevent crashing", "Warning, click okay to close the program!");
+            //goBack_Click(new object(), new RoutedEventArgs());
+            //Application.Current.Shutdown();
+            Environment.Exit(0);
         }
     }
     public static class StringExtensions
