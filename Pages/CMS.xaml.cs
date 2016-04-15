@@ -44,8 +44,8 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
         }
 
 
-        string tempPath;
-        string sourceFileName;
+        string tempPath = "";
+        string sourceFileName = "";
 
         private void bOpenFileDialog_Click(object sender, RoutedEventArgs e)
         {
@@ -53,7 +53,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
             openFileDialog1.Filter = "All Files (*.*)|*.*";
             openFileDialog1.FilterIndex = 1;
-
+            openFileDialog1.InitialDirectory = @"../";
             openFileDialog1.Multiselect = true;
 
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -84,6 +84,7 @@ namespace Microsoft.Samples.Kinect.ControlsBasics
 
             openFileDialog2.Filter = "All Files (*.*)|*.*";
             openFileDialog2.FilterIndex = 1;
+            openFileDialog2.InitialDirectory = @"../";
 
             openFileDialog2.Multiselect = true;
 

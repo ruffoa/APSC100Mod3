@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Mod3-Project.exe" version="1.0.0.10" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="Mod3-Project.exe" version="1.0.0.14" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="Images\Kinect.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -67,17 +67,197 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Mod3-Project.exe" size="10400200">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Mod3-Project.exe" size="8018888">
       <assemblyIdentity name="Mod3-Project" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yxOtBZmAxi6g3ys9FB9hhkw1qfmdB1tSz5aAAjKIvGY=</dsig:DigestValue>
+        <dsig:DigestValue>Bz9EXTDEd4GB2RhDigrG8cQZnLyZNEE57r18kk/+XNo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="hcAssets\grid1.png" size="294399">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>CUvhGh50N2xFV7XSbJ89df39B1nMXWmLG2SupmNtkTs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid10.png" size="94299">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>iAmXZCfucwNyhmW63SOLx0g/sA9LpQRoLqgRBwR6J/A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid11.png" size="144370">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NbxhXJIwTuiX9mHelP9wyj19Emak+us//ZPj6z/146k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid12.png" size="22175">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2ESh+KgR5YKIPdtKvFZaas86gFu9b50ppsJyeB0T4QU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid13.png" size="70041">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Z7EWks+H6lqCz7OwSSX3pj2TIjcfNlYrdx6GSE4FeWc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid14.png" size="6779">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Iy0T2XsEqh+crQa7LCDXTOvhz7Y+6VsBeQP1Ll2b8w0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid15.png" size="11743">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>e2ucjhDgM1E/pTYKyjzOSY+I8zRoCBNWMAlkXZOa84M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid16.png" size="258315">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>kL7laSD/nguuecVthd2eiyeUi96OG8rhJAiiAVYVvGU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid17.png" size="565031">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Zm3GEiHiaivtRsz5YOcZ3qtH3BqJBKv6BMCQLUCHE3Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid18.png" size="182647">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Uz0YQgi+th26rioDYgRnNkmgOXGrSmKnBqWfG7TcR4E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid19.png" size="493672">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FNm6qmeIjHBWZKL7YNz5Pu0u6s5vgfEgs+uwrJYpOZs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid2.png" size="21765">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>fQq0SzdK3ItitcL1YxyTXK7Gbwx0ugr9AEnHIyOdEQg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid3.png" size="13308">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>e3IGdgLbLMBXPiafKk5A4g9US0uEg6GjhNzM4FGA04I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid4.png" size="5560">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GPPZmM5XEzys+WmMmjmkBK/0iMR4QCP9TCmSoqEwr1o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid5.png" size="8231">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GsGJRM1CXNLAOrNX2dBJP0xU10c7O3fvO8+kYNpUAuY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid6.png" size="14638">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MLwJz9AJH36BM4WzRZrbO4XlgxIxYhPg1AykXrkiIbA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid7.png" size="87038">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Koz/UzRlGdZ5gKcVh9KNE/hXUJEHmXecW6ce1ToqWm4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid8.png" size="17511">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HwIHsr7sIgEYFrSHCIZu+LO74MtXN1oPNsvDvCsXWiE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\grid9.png" size="55986">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>O8RAt7Wn7gK9uJXaV5pAV+dy/KCqzRqbPf2KY1UXeao=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hcAssets\img1.png" size="13308">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>e3IGdgLbLMBXPiafKk5A4g9US0uEg6GjhNzM4FGA04I=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Images\Kinect.ico" size="12846">
     <hash>
       <dsig:Transforms>
