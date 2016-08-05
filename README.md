@@ -49,7 +49,7 @@ Other Useful Tips:
 
 Press the END key at any time to open the help tutorial.  This can be set to a button as well if in the future a physical button is desired in order to open the tutorial.
 
-The video player can also play videos from an online server.  To do this, you will have to modify the source code (available at the link provided under the <code> tab), and change the “source” field of the video to the URL that you have the video hosted on. 
+The video player can also play videos from an online server.  To do this, you will have to modify the source code (available at the link provided under the '<code>' tab), and change the “source” field of the video to the URL that you have the video hosted on. 
 
 Warning:
 
